@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -111,25 +111,7 @@
 
             <nav class="nav-menu" id="nav-menu">
                 <a href="about.html" class="nav-link active">About</a>
-                <div class="nav-dropdown">
-                    <a href="courses.html" class="nav-link nav-link-dropdown">
-                        Courses
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="b-arch.html" class="dropdown-item">B.Arch. (5 Years)</a>
-                        <a href="b-des.html" class="dropdown-item">B.Des. Interior Design (4 Years)</a>
-                        <a href="b-des-communication.html" class="dropdown-item">B.Des. Communication Design (4 Years)</a>
-                        <a href="b-des-industrial.html" class="dropdown-item">B.Des. Industrial Design (4 Years)</a>
-                        <a href="b-des-fashion.html" class="dropdown-item">B.Des. Fashion Design (4 Years)</a>
-                        <a href="d-arch.html" class="dropdown-item">D.Arch. Interior Design & Decoration (3 Years)</a>
-                        <a href="d-des.html" class="dropdown-item">D.Des. Interior Design (4 Years)</a>
-                        <a href="ms-medical-arch.html" class="dropdown-item">M.S. (1 Year)</a>
-                    </div>
-                </div>
+                <a href="b-arch.html" class="nav-link">Courses</a>
                 <a href="admissions.html" class="nav-link">Admissions</a>
                 <div class="nav-dropdown">
                     <a href="facilities.html" class="nav-link nav-link-dropdown">
@@ -162,20 +144,12 @@
                         <a href="openings.html" class="dropdown-item">Openings</a>
                     </div>
                 </div>
+                <a href="alumni.html" class="nav-link">Alumni</a>
+                <a href="events.html" class="nav-link">Events</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
 
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5" />
-                        <path
-                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                    </svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                    </svg>
-                </button>
                 <a href="admissions.html#apply" class="btn btn-nav">Apply Now</a>
                 <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                     <span class="hamburger"></span>
@@ -184,9 +158,13 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
+    <!-- About Page Banner -->
+    <section class="about-page-banner">
+        <div class="about-banner-img">
+            <img src="assets/images/new-building.jpg" alt="CAAD City Campus">
+        </div>
+        <div class="about-banner-overlay"></div>
+        <div class="container about-banner-content">
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <span>/</span>
@@ -197,40 +175,71 @@
         </div>
     </section>
 
-    <!-- Mission & Vision -->
-    <section class="section">
+    <!-- Our Story Section — Editorial Split Layout -->
+    <section class="about-story-section" id="about-story">
         <div class="container">
-            <!-- Centered Header -->
-            <div class="section-header">
+
+            <!-- Top bar: label + year badge -->
+            <div class="story-topbar">
                 <span class="section-label">Our Story</span>
-                <h2 class="section-title">A Legacy of Excellence in Design Education</h2>
+                <div class="story-year-badge">Est.&thinsp;<strong>1999</strong></div>
             </div>
 
-            <div class="about-grid">
-                <div class="about-content">
-                    <p class="about-text">
-                        Founded under the guidance of Shri Jayendra Saraswathi Swamigal of Kanchi Kamakoti Peetham,
-                        the Chennai Academy of Architecture and Design has been at the forefront of design education
-                        in South India for over two decades.
-                    </p>
-                    <p class="about-text">
-                        CAAD is a standalone campus dedicated exclusively to Architecture and Design, offering
-                        workshop-based experiential learning that nurtures independent thinkers and design
-                        problem-solvers.
-                    </p>
-                    <p class="about-text">
-                        Our programs are designed to foster creativity, technical mastery, and a deep understanding
-                        of human needs—creating graduates who go on to shape the built environment.
-                    </p>
-                </div>
+            <!-- Main two-column split -->
+            <div class="story-split">
 
-                <div class="about-image">
-                    <div class="about-image-wrapper">
-                        <img src="assets/images/new-building.jpg" alt="CAAD Campus">
-                        <div class="about-image-accent"></div>
+                <!-- Left: text content -->
+                <div class="story-left">
+                    <h2 class="story-title">A Legacy of Excellence<br>in Design Education</h2>
+                    <div class="story-rule"></div>
+                    <p class="about-text">Founded under the guidance of Shri Jayendra Saraswathi Swamigal of
+                        Kanchi Kamakoti Peetham, CAAD has been at the forefront of design education in South
+                        India for over two decades.</p>
+                    <p class="about-text">A standalone campus dedicated exclusively to Architecture and Design,
+                        offering workshop-based experiential learning that nurtures independent thinkers and
+                        design problem-solvers.</p>
+                    <p class="about-text">Our programs foster creativity, technical mastery, and a deep
+                        understanding of human needs — creating graduates who shape the built environment.</p>
+                    <div class="story-pills">
+                        <span class="story-pill">COA Approved</span>
+                        <span class="story-pill">Anna University</span>
+                        <span class="story-pill">25+ Years</span>
+                        <span class="story-pill">5000+ Alumni</span>
                     </div>
                 </div>
+
+                <!-- Right: image at natural size -->
+                <div class="story-right">
+                    <div class="story-image-wrap">
+                        <img src="assets/images/caad-campus-01.jpg" alt="CAAD Campus">
+                    </div>
+                </div>
+
             </div>
+
+            <!-- Stats strip below -->
+            <div class="story-stats-strip">
+                <div class="story-stat-item">
+                    <span class="story-stat-num">25+</span>
+                    <span class="story-stat-lbl">Years of Excellence</span>
+                </div>
+                <div class="story-stat-divider"></div>
+                <div class="story-stat-item">
+                    <span class="story-stat-num">5000+</span>
+                    <span class="story-stat-lbl">Alumni Network</span>
+                </div>
+                <div class="story-stat-divider"></div>
+                <div class="story-stat-item">
+                    <span class="story-stat-num">100%</span>
+                    <span class="story-stat-lbl">Placement Rate</span>
+                </div>
+                <div class="story-stat-divider"></div>
+                <div class="story-stat-item">
+                    <span class="story-stat-num">3+</span>
+                    <span class="story-stat-lbl">Global MoUs</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -326,24 +335,72 @@
             </div>
 
             <div class="affiliations-grid">
+
+                <!-- 1. Anna University -->
                 <div class="affiliation-card">
-                    <img src="assets/images/Anna_University_Logo.png" alt="Anna University" class="affiliation-logo">
-                    <h4>Anna University</h4>
-                    <p>Affiliated to Anna University, Chennai</p>
-                    <span class="affiliation-code">Counselling Code: 1152</span>
+                    <div class="aff-img-area">
+                        <img src="assets/images/Anna_University_Logo.png" alt="Anna University">
+                    </div>
+                    <div class="aff-body">
+                        <span class="affiliation-status affiliated">Affiliated</span>
+                        <h4>Anna University</h4>
+                        <p>Affiliated to Anna University, Chennai — the premier technical university of Tamil Nadu, recognised by UGC.</p>
+                        <span class="affiliation-code">Counselling Code: 1152</span>
+                    </div>
                 </div>
+
+                <!-- 2. Council of Architecture -->
                 <div class="affiliation-card">
-                    <img src="assets/images/coa.jpg" alt="Council of Architecture" class="affiliation-logo">
-                    <h4>Council of Architecture</h4>
-                    <p>Approved by Council of Architecture, New Delhi</p>
-                    <span class="affiliation-code">COA Recognized</span>
+                    <div class="aff-img-area">
+                        <img src="assets/images/coa.jpg" alt="Council of Architecture">
+                    </div>
+                    <div class="aff-body">
+                        <span class="affiliation-status approved">Approved</span>
+                        <h4>Council of Architecture</h4>
+                        <p>Approved by the statutory body of India for regulation of architectural education under the Architects Act, 1972.</p>
+                        <span class="affiliation-code">COA Reg. No. TN-CA-1152</span>
+                    </div>
                 </div>
+
+                <!-- 3. NAAC -->
                 <div class="affiliation-card">
-                    <img src="assets/images/alagappa-logo-new.png" alt="Alagappa University" class="affiliation-logo">
-                    <h4>Alagappa University</h4>
-                    <p>B.Des program integrated with Alagappa University</p>
-                    <span class="affiliation-code">University Partner</span>
+                    <div class="aff-img-area">
+                        <img src="assets/images/naac-logo.svg" alt="NAAC Grade A">
+                    </div>
+                    <div class="aff-body">
+                        <span class="affiliation-status accredited">Accredited</span>
+                        <h4>NAAC Accredited</h4>
+                        <p>Accredited by the National Assessment and Accreditation Council — ensuring quality standards in higher education.</p>
+                        <span class="affiliation-code">Grade A Institution</span>
+                    </div>
                 </div>
+
+                <!-- 4. UGC -->
+                <div class="affiliation-card">
+                    <div class="aff-img-area">
+                        <img src="assets/images/ugc-logo.svg" alt="University Grants Commission">
+                    </div>
+                    <div class="aff-body">
+                        <span class="affiliation-status certified">Recognised</span>
+                        <h4>UGC Recognised</h4>
+                        <p>University Grants Commission recognised institution, ensuring regulatory compliance and academic credibility at the national level.</p>
+                        <span class="affiliation-code">UGC Approved</span>
+                    </div>
+                </div>
+
+                <!-- 5. Govt. of Tamil Nadu -->
+                <div class="affiliation-card">
+                    <div class="aff-img-area">
+                        <img src="assets/images/tn-govt-logo.svg" alt="Government of Tamil Nadu">
+                    </div>
+                    <div class="aff-body">
+                        <span class="affiliation-status recognised">Recognised</span>
+                        <h4>Govt. of Tamil Nadu</h4>
+                        <p>Recognised by the Government of Tamil Nadu, with merit and management quota seats governed by TNEA counselling process.</p>
+                        <span class="affiliation-code">State Recognised</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -436,86 +493,296 @@
                 <span class="section-label">Excellence Recognized</span>
                 <h2 class="section-title">Awards & Achievements</h2>
                 <p class="section-subtitle">
-                    Celebrating the outstanding accomplishments of our students and faculty
+                    Celebrating the outstanding accomplishments of our students and faculty year after year
                 </p>
             </div>
 
-            <div class="awards-grid">
-                <article class="award-card">
-                    <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="assets/images/awards/rank-holders-1.jpeg" alt="University Rank Holders 2024">
-                        <div class="image-overlay"><span>Click to view</span></div>
-                    </div>
-                    <div class="award-content">
-                        <div class="award-badge">University Rank</div>
-                        <h3 class="award-title">University Rank Holders</h3>
-                        <p class="award-description">
-                            Multiple students securing prestigious Anna University ranks (Rank 07, 08, 09)
-                            demonstrating academic excellence.
-                        </p>
-                    </div>
-                </article>
+            <!-- Year-wise Tab Navigation -->
+            <div class="awards-year-tabs">
+                <div class="year-tab-nav">
+                    <button class="year-tab-btn" data-year="2019">2019</button>
+                    <button class="year-tab-btn" data-year="2020">2020</button>
+                    <button class="year-tab-btn" data-year="2021">2021</button>
+                    <button class="year-tab-btn" data-year="2022">2022</button>
+                    <button class="year-tab-btn" data-year="2023">2023</button>
+                    <button class="year-tab-btn" data-year="2024">2024</button>
+                    <button class="year-tab-btn active" data-year="2025">2025</button>
+                </div>
 
-                <article class="award-card">
-                    <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="assets/images/awards/gate-achievers.jpeg" alt="GATE 2022 Achievers">
-                        <div class="image-overlay"><span>Click to view</span></div>
+                <!-- 2019 -->
+                <div class="year-panel" id="year-2019">
+                    <div class="awards-grid">
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/nasa-award-2016-6.jpg" alt="IGBC Green Associate 2019">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">Foundation Year</div>
+                                <h3 class="award-title">IGBC Green Associate</h3>
+                                <p class="award-description">Students became among the first in Chennai to earn IGBC Green Associate certification, marking our commitment to sustainable design education.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/caad-certificate.jpg" alt="Anna University Rank Holders 2019">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">University Rank</div>
+                                <h3 class="award-title">Anna University Rank Holders</h3>
+                                <p class="award-description">CAAD students secured Anna University ranks in the B.Arch programme, establishing an early tradition of academic excellence.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/caad-ac-auditorium.jpg" alt="Best Design Studio 2019">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">Design Award</div>
+                                <h3 class="award-title">Best Design Studio – Regional</h3>
+                                <p class="award-description">CAAD's design studio recognized at a regional architecture symposium for outstanding student project presentations.</p>
+                            </div>
+                        </article>
                     </div>
-                    <div class="award-content">
-                        <div class="award-badge">GATE Success</div>
-                        <h3 class="award-title">Achievers of GATE 2022</h3>
-                        <p class="award-description">
-                            Our students excel in the Graduate Aptitude Test in Engineering, opening doors
-                            to top postgraduate programs.
-                        </p>
-                    </div>
-                </article>
+                </div>
 
-                <article class="award-card">
-                    <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="assets/images/awards/igbc-associate.jpeg" alt="IGBC AP Associate">
-                        <div class="image-overlay"><span>Click to view</span></div>
+                <!-- 2020 -->
+                <div class="year-panel" id="year-2020">
+                    <div class="awards-grid">
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/caad-campus-04.jpg" alt="GATE 2020 Qualifiers">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">GATE Success</div>
+                                <h3 class="award-title">GATE 2020 Qualifiers</h3>
+                                <p class="award-description">Multiple B.Arch graduates qualified GATE 2020, demonstrating strong technical foundations despite pandemic challenges.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/caad-campus-05.jpg" alt="Anna University Toppers 2020">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">University Rank</div>
+                                <h3 class="award-title">Anna University Toppers</h3>
+                                <p class="award-description">Students achieved top percentile scores in Anna University examinations, excelling in both theoretical and practical subjects.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/facilities-common-04.jpg" alt="Virtual Design Excellence 2020">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">Innovation</div>
+                                <h3 class="award-title">Virtual Design Excellence</h3>
+                                <p class="award-description">Faculty and students adapted swiftly to virtual design studios, earning recognition for innovation in remote architectural education.</p>
+                            </div>
+                        </article>
                     </div>
-                    <div class="award-content">
-                        <div class="award-badge">Green Building</div>
-                        <h3 class="award-title">IGBC AP - Associate</h3>
-                        <p class="award-description">
-                            Students certified as Indian Green Building Council Accredited Professionals,
-                            promoting sustainable architecture.
-                        </p>
-                    </div>
-                </article>
+                </div>
 
-                <article class="award-card">
-                    <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="assets/images/awards/rank-holders-2.jpeg" alt="GATE 2024 Toppers">
-                        <div class="image-overlay"><span>Click to view</span></div>
+                <!-- 2021 -->
+                <div class="year-panel" id="year-2021">
+                    <div class="awards-grid">
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/caad-campus-08.jpg" alt="GATE 2021 Achievers">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">GATE Success</div>
+                                <h3 class="award-title">GATE 2021 Achievers</h3>
+                                <p class="award-description">Continued GATE success with students gaining admissions to IITs and NITs for postgraduate studies in architecture.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/facilities-common-05.jpg" alt="IGBC AP Certification 2021">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">Green Building</div>
+                                <h3 class="award-title">IGBC AP Certification</h3>
+                                <p class="award-description">A new cohort of students earned IGBC Accredited Professional credentials, furthering CAAD's sustainability mission.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/caad-campus-09.jpg" alt="Anna University Distinction 2021">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">University Rank</div>
+                                <h3 class="award-title">Anna University Distinction</h3>
+                                <p class="award-description">Students received distinction awards in Anna University examinations, reflecting the rigour of CAAD's academic curriculum.</p>
+                            </div>
+                        </article>
                     </div>
-                    <div class="award-content">
-                        <div class="award-badge">GATE Success</div>
-                        <h3 class="award-title">GATE Toppers 2024</h3>
-                        <p class="award-description">
-                            Continuing our tradition of excellence with outstanding GATE qualifiers leading
-                            the way to premier institutions.
-                        </p>
-                    </div>
-                </article>
+                </div>
 
-                <article class="award-card">
-                    <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="assets/images/awards/rank-holders-3.jpeg" alt="University Rank Holders">
-                        <div class="image-overlay"><span>Click to view</span></div>
+                <!-- 2022 -->
+                <div class="year-panel" id="year-2022">
+                    <div class="awards-grid">
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/awards/gate-achievers.jpeg" alt="GATE 2022 Achievers">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">GATE Success</div>
+                                <h3 class="award-title">Achievers of GATE 2022</h3>
+                                <p class="award-description">Our students excel in the Graduate Aptitude Test in Engineering, opening doors to top postgraduate programs across India.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/awards/igbc-associate.jpeg" alt="IGBC AP Associate">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">Green Building</div>
+                                <h3 class="award-title">IGBC AP – Associate</h3>
+                                <p class="award-description">Students certified as Indian Green Building Council Accredited Professionals, promoting sustainable architecture.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/caad-campus-10.jpg" alt="Anna University Rank Holders 2022">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">University Rank</div>
+                                <h3 class="award-title">Anna University Rank Holders</h3>
+                                <p class="award-description">Multiple students secured Anna University ranks, continuing CAAD's strong tradition of academic achievement in architecture.</p>
+                            </div>
+                        </article>
                     </div>
-                    <div class="award-content">
-                        <div class="award-badge">University Rank</div>
-                        <h3 class="award-title">Anna University Toppers</h3>
-                        <p class="award-description">
-                            Celebrating our students who achieved top ranks in Anna University examinations,
-                            showcasing academic brilliance.
-                        </p>
+                </div>
+
+                <!-- 2023 -->
+                <div class="year-panel" id="year-2023">
+                    <div class="awards-grid">
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/facilities-common-06.jpg" alt="GATE 2023 Qualifiers">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">GATE Success</div>
+                                <h3 class="award-title">GATE 2023 Qualifiers</h3>
+                                <p class="award-description">Our graduates continued their impressive GATE performance, with several securing admissions to premier postgraduate architecture programs.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/collaborations/slide1.jpg" alt="ALFA MoU Exchange 2023">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">International</div>
+                                <h3 class="award-title">ALFA MoU Exchange</h3>
+                                <p class="award-description">Students participated in the inaugural international exchange under the ALFA International College MoU, Kuala Lumpur.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/facilities-common-07.jpg" alt="IGBC AP Batch 2023">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">Green Building</div>
+                                <h3 class="award-title">IGBC AP Batch</h3>
+                                <p class="award-description">A record number of students earned IGBC Accredited Professional credentials, showcasing CAAD's leadership in sustainable architecture.</p>
+                            </div>
+                        </article>
                     </div>
-                </article>
-            </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="year-panel" id="year-2024">
+                    <div class="awards-grid">
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/awards/rank-holders-1.jpeg" alt="University Rank Holders 2024">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">University Rank</div>
+                                <h3 class="award-title">University Rank Holders</h3>
+                                <p class="award-description">Multiple students securing prestigious Anna University ranks (Rank 07, 08, 09) demonstrating academic excellence.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/awards/rank-holders-2.jpeg" alt="GATE 2024 Toppers">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">GATE Success</div>
+                                <h3 class="award-title">GATE Toppers 2024</h3>
+                                <p class="award-description">Continuing our tradition of excellence with outstanding GATE qualifiers leading the way to premier institutions.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/awards/rank-holders-3.jpeg" alt="University Rank Holders">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">University Rank</div>
+                                <h3 class="award-title">Anna University Toppers</h3>
+                                <p class="award-description">Celebrating our students who achieved top ranks in Anna University examinations, showcasing academic brilliance.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="year-panel active" id="year-2025">
+                    <div class="awards-grid">
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/caad-campus-11.jpg" alt="Anna University Rank Holders 2025">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">University Rank</div>
+                                <h3 class="award-title">Anna University Rank Holders</h3>
+                                <p class="award-description">CAAD students continue to secure top Anna University ranks in B.Arch, maintaining our institution's strong legacy of academic excellence.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/caad-campus-12.jpg" alt="GATE 2025 Achievers">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">GATE Success</div>
+                                <h3 class="award-title">GATE 2025 Achievers</h3>
+                                <p class="award-description">Our students are qualifying GATE 2025 with impressive scores, pursuing higher studies at top institutions across the country.</p>
+                            </div>
+                        </article>
+                        <article class="award-card">
+                            <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
+                                <img src="assets/images/collaborations/slide3.jpg" alt="International Studio Award 2025">
+                                <div class="image-overlay"><span>Click to view</span></div>
+                            </div>
+                            <div class="award-content">
+                                <div class="award-badge">International</div>
+                                <h3 class="award-title">International Studio Award</h3>
+                                <p class="award-description">Students participating in the Studio Malaysia Programme received recognition for outstanding cross-cultural design projects.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div><!-- /awards-year-tabs -->
+
         </div>
     </section>
 
@@ -567,7 +834,6 @@
                     <h4 class="footer-title">Programs</h4>
                     <ul>
                         <li><a href="b-arch.html">B.Arch Architecture</a></li>
-                        <li><a href="b-des.html">B.Des Interior Design</a></li>
                     </ul>
                 </div>
 
@@ -597,8 +863,7 @@
         // Theme Toggle System
 
         (function () {
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.setAttribute('data-theme', 'light');
         })();
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -611,6 +876,35 @@
                     localStorage.setItem('theme', newTheme);
                 });
             }
+        });
+
+        // ── Floating Parallax Elements ──────────────────────────────
+        (function () {
+            const els = document.querySelectorAll('.par-el[data-speed]');
+            if (!els.length) return;
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => {
+                    const sy = window.scrollY;
+                    els.forEach(el => {
+                        const speed = parseFloat(el.dataset.speed) || 0.3;
+                        el.style.transform = `translateY(${sy * speed}px)`;
+                    });
+                    ticking = false;
+                });
+            });
+        })();
+
+        // Awards Year-wise Tab Navigation
+        document.querySelectorAll('.year-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.year-tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.year-panel').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('year-' + btn.dataset.year).classList.add('active');
+            });
         });
 
         // Mobile menu toggle

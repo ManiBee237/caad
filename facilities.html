@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -110,25 +110,7 @@
 
             <nav class="nav-menu" id="nav-menu">
                 <a href="about.html" class="nav-link">About</a>
-                <div class="nav-dropdown">
-                    <a href="courses.html" class="nav-link nav-link-dropdown">
-                        Courses
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="b-arch.html" class="dropdown-item">B.Arch. (5 Years)</a>
-                        <a href="b-des.html" class="dropdown-item">B.Des. Interior Design (4 Years)</a>
-                        <a href="b-des-communication.html" class="dropdown-item">B.Des. Communication Design (4 Years)</a>
-                        <a href="b-des-industrial.html" class="dropdown-item">B.Des. Industrial Design (4 Years)</a>
-                        <a href="b-des-fashion.html" class="dropdown-item">B.Des. Fashion Design (4 Years)</a>
-                        <a href="d-arch.html" class="dropdown-item">D.Arch. Interior Design & Decoration (3 Years)</a>
-                        <a href="d-des.html" class="dropdown-item">D.Des. Interior Design (4 Years)</a>
-                        <a href="ms-medical-arch.html" class="dropdown-item">M.S. (1 Year)</a>
-                    </div>
-                </div>
+                <a href="b-arch.html" class="nav-link">Courses</a>
                 <a href="admissions.html" class="nav-link">Admissions</a>
                 <div class="nav-dropdown">
                     <a href="facilities.html" class="nav-link nav-link-dropdown active">
@@ -161,20 +143,12 @@
                         <a href="openings.html" class="dropdown-item">Openings</a>
                     </div>
                 </div>
+                <a href="alumni.html" class="nav-link">Alumni</a>
+                <a href="events.html" class="nav-link">Events</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
 
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5" />
-                        <path
-                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                    </svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                    </svg>
-                </button>
                 <a href="admissions.html#apply" class="btn btn-nav">Apply Now</a>
                 <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                     <span class="hamburger"></span>
@@ -431,8 +405,7 @@
     <script>
         // Theme Toggle System
         (function () {
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.setAttribute('data-theme', 'light');
         })();
 
         const themeToggle = document.getElementById('theme-toggle');

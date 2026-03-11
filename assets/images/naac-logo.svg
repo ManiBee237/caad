@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- Outer ring -->
+  <circle cx="120" cy="120" r="116" fill="#EDF2FB" stroke="#1A3C78" stroke-width="4"/>
+  <!-- Inner dashed ring -->
+  <circle cx="120" cy="120" r="100" fill="none" stroke="#1A3C78" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <!-- Star dots at compass points -->
+  <circle cx="120" cy="20" r="4" fill="#1A3C78"/>
+  <circle cx="220" cy="120" r="4" fill="#1A3C78"/>
+  <circle cx="120" cy="220" r="4" fill="#1A3C78"/>
+  <circle cx="20" cy="120" r="4" fill="#1A3C78"/>
+  <!-- Top label -->
+  <text x="120" y="72" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" font-weight="600" fill="#1A3C78" letter-spacing="2">NATIONAL ASSESSMENT</text>
+  <text x="120" y="88" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" font-weight="600" fill="#1A3C78" letter-spacing="2">&amp; ACCREDITATION COUNCIL</text>
+  <!-- Horizontal rule -->
+  <line x1="50" y1="98" x2="190" y2="98" stroke="#1A3C78" stroke-width="1.2"/>
+  <!-- Big NAAC text -->
+  <text x="120" y="147" text-anchor="middle" font-size="44" font-family="Arial,sans-serif" font-weight="900" fill="#1A3C78" letter-spacing="3">NAAC</text>
+  <!-- Grade badge -->
+  <rect x="80" y="157" width="80" height="30" rx="15" fill="#C41E3A"/>
+  <text x="120" y="177" text-anchor="middle" font-size="14" font-family="Arial,sans-serif" font-weight="800" fill="#ffffff" letter-spacing="3">GRADE  A</text>
+  <!-- Bottom label -->
+  <text x="120" y="210" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#1A3C78" letter-spacing="1.5">GOVT. OF INDIA</text>
+</svg>

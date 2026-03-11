@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="CAAD - Chennai Academy of Architecture and Design. Premier education for Architecture, Interior Design & Creative Excellence in Chennai. Affiliated to Anna University, Approved by Council of Architecture.">
+        content="CAAD - Chennai Academy of Architecture and Design. Premier education for Architecture & Design Excellence in Chennai. Affiliated to Anna University, Approved by Council of Architecture.">
     <title>CAAD | Chennai Academy of Architecture and Design</title>
 
     <!-- Google Fonts -->
@@ -29,20 +29,86 @@
     </div>
 
 
-    <!-- Welcome Modal -->
+    <!-- Admissions Announcement Modal -->
     <div class="modal-overlay" id="welcomeModal">
-        <div class="modal-content">
+        <div class="modal-content alumni-admission-modal">
             <button class="modal-close" id="closeModal" aria-label="Close modal">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
+
+            <!-- Campus Image Carousel -->
+            <div class="modal-carousel-wrapper">
+                <div class="alumni-carousel-track" id="indexCarouselTrack">
+                    <div class="alumni-carousel-slide active">
+                        <img src="assets/images/uploaded_media_1769327607944.jpg" alt="CAAD Campus Life">
+                        <div class="alumni-carousel-caption">
+                            <h4>State-of-the-Art Campus</h4>
+                            <p>Modern facilities designed to inspire creativity</p>
+                        </div>
+                    </div>
+                    <div class="alumni-carousel-slide">
+                        <img src="assets/images/caad-campus-01.jpg" alt="CAAD Architecture Studio">
+                        <div class="alumni-carousel-caption">
+                            <h4>Design Studios</h4>
+                            <p>Where ideas take shape through hands-on practice</p>
+                        </div>
+                    </div>
+                    <div class="alumni-carousel-slide">
+                        <img src="assets/images/facilities-common-03.jpg" alt="CAAD Workshop">
+                        <div class="alumni-carousel-caption">
+                            <h4>Workshops &amp; Labs</h4>
+                            <p>Industry-grade tools for real-world learning</p>
+                        </div>
+                    </div>
+                    <div class="alumni-carousel-slide">
+                        <img src="assets/images/caad-campus-02.jpg" alt="CAAD Campus View">
+                        <div class="alumni-carousel-caption">
+                            <h4>Green Campus</h4>
+                            <p>A sustainable environment that reflects our values</p>
+                        </div>
+                    </div>
+                    <div class="alumni-carousel-slide">
+                        <img src="assets/images/facility-caad-building.jpg" alt="CAAD Main Building">
+                        <div class="alumni-carousel-caption">
+                            <h4>Architectural Excellence</h4>
+                            <p>Our building itself is a lesson in design</p>
+                        </div>
+                    </div>
+                    <div class="alumni-carousel-slide">
+                        <img src="assets/images/caad-campus-05.jpg" alt="CAAD Events">
+                        <div class="alumni-carousel-caption">
+                            <h4>Events &amp; Exhibitions</h4>
+                            <p>Showcasing student talent and innovation</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation arrows -->
+                <button class="alumni-carousel-btn alumni-carousel-prev" id="indexCarouselPrev" aria-label="Previous slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button class="alumni-carousel-btn alumni-carousel-next" id="indexCarouselNext" aria-label="Next slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22"><polyline points="9 6 15 12 9 18"/></svg>
+                </button>
+                <!-- Dots indicator -->
+                <div class="alumni-carousel-dots" id="indexCarouselDots"></div>
+            </div>
+
+            <!-- Modal Info Body -->
             <div class="modal-body">
                 <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="modal-logo">
-                <h2>Welcome to CAAD</h2>
-                <p>Chennai Academy of Architecture & Design</p>
-                <p class="modal-description">Shaping Architects & Designers Since 1999</p>
-                <a href="admissions.html" class="btn btn-primary">Explore Admissions</a>
+                <div class="admission-blink-badge">
+                    <span class="blink-dot"></span>
+                    <span>Admissions Open 2026–2027</span>
+                </div>
+                <p class="modal-description">B.Arch. - Bachelor of Architecture (5 Years)</p>
+                <p>Affiliated to Anna University, Chennai<br>Approved by Council of Architecture, New Delhi</p>
+                <div style="margin: 1rem 0; padding: 0.75rem; border-radius: 8px; background: var(--color-primary-light);">
+                    <p style="margin: 0; font-size: 0.9rem;"><strong>Counselling Code: 1152</strong></p>
+                    <p style="margin: 0.25rem 0 0; font-size: 0.85rem;">NATA / JEE Paper 2 Qualified</p>
+                </div>
+                <a href="admissions.html" class="btn btn-primary">Apply Now</a>
             </div>
         </div>
     </div>
@@ -87,7 +153,6 @@
                     <select id="enquiryInterest" name="interest" required>
                         <option value="">Select a program</option>
                         <option value="b-arch">B.Arch - Architecture</option>
-                        <option value="b-des">B.Des - Interior Design</option>
                         <option value="campus-tour">Campus Tour</option>
                         <option value="other">Other</option>
                     </select>
@@ -155,9 +220,6 @@
                 </a>
             </div>
 
-            <div class="top-bar-center" style="font-size: 0.8rem; letter-spacing: 0.5px; opacity: 0.9;">
-                Affiliated to Anna University, Chennai &amp; Approved by Council of Architecture, New Delhi
-            </div>
 
             <div class="top-bar-right">
                 <a href="https://www.facebook.com/caaborivakkam" target="_blank" class="top-bar-social"
@@ -194,25 +256,7 @@
 
             <nav class="nav-menu" id="nav-menu">
                 <a href="about.html" class="nav-link">About</a>
-                <div class="nav-dropdown">
-                    <a href="courses.html" class="nav-link nav-link-dropdown">
-                        Courses
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="b-arch.html" class="dropdown-item">B.Arch. (5 Years)</a>
-                        <a href="b-des.html" class="dropdown-item">B.Des. Interior Design (4 Years)</a>
-                        <a href="b-des-communication.html" class="dropdown-item">B.Des. Communication Design (4 Years)</a>
-                        <a href="b-des-industrial.html" class="dropdown-item">B.Des. Industrial Design (4 Years)</a>
-                        <a href="b-des-fashion.html" class="dropdown-item">B.Des. Fashion Design (4 Years)</a>
-                        <a href="d-arch.html" class="dropdown-item">D.Arch. Interior Design & Decoration (3 Years)</a>
-                        <a href="d-des.html" class="dropdown-item">D.Des. Interior Design (4 Years)</a>
-                        <a href="ms-medical-arch.html" class="dropdown-item">M.S. (1 Year)</a>
-                    </div>
-                </div>
+                <a href="b-arch.html" class="nav-link">Courses</a>
                 <a href="admissions.html" class="nav-link">Admissions</a>
                 <div class="nav-dropdown">
                     <a href="facilities.html" class="nav-link nav-link-dropdown">
@@ -247,20 +291,12 @@
                         <a href="openings.html" class="dropdown-item">Openings</a>
                     </div>
                 </div>
+                <a href="alumni.html" class="nav-link">Alumni</a>
+                <a href="events.html" class="nav-link">Events</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
 
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5" />
-                        <path
-                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                    </svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                    </svg>
-                </button>
                 <a href="admissions.html#apply" class="btn btn-nav">Apply Now</a>
                 <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                     <span class="hamburger"></span>
@@ -291,12 +327,12 @@
             </div>
 
             <h1 class="hero-headline">
-                Design the Future.<br>
-                <span class="headline-accent">Build Your Legacy.</span>
+                Design the<br>Future.
+                <span class="headline-accent">Build Your<br>Legacy.</span>
             </h1>
 
             <p class="hero-subheadline">
-                Chennai's premier academy for Architecture, Interior Design & Creative Excellence.
+                Chennai's premier academy for Architecture & Design Excellence.
             </p>
 
             <div class="hero-cta-group">
@@ -463,154 +499,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="stacking-card">
-                    <div class="card-inner">
-                        <div class="card-content">
-                            <div class="card-number">02</div>
-                            <h3>B.Des. Interior Design (4 Years)</h3>
-                            <div class="card-details">
-                                <p><strong>Course Title:</strong> Bachelor of Design</p>
-                                <p><strong>Eligibility:</strong> 12th or Diploma or any equivalent study</p>
-                                <p><strong>Affiliation:</strong> CAAD is a collaborative institution of Alagappa
-                                    University whose courses are approved by UGC of India.</p>
-                                <p><strong>Overview:</strong> Throughout the program, our students learn various aspects
-                                    of interior design, including spatial planning, aesthetics, functionality,
-                                    sustainability, and user-centric design.</p>
-                            </div>
-                        </div>
-                        <div class="card-image">
-                            <img src="assets/images/facilities-common-03.jpg" alt="B.Des Interior">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="stacking-card">
-                    <div class="card-inner">
-                        <div class="card-content">
-                            <div class="card-number">03</div>
-                            <h3>B.Des. Communication Design (4 Years)</h3>
-                            <div class="card-details">
-                                <p><strong>Course Title:</strong> Bachelor of Design</p>
-                                <p><strong>Eligibility:</strong> 12th or Diploma or any equivalent study</p>
-                                <p><strong>Affiliation:</strong> CAAD is a collaborative institution of Alagappa
-                                    University whose courses are approved by UGC of India.</p>
-                                <p><strong>Overview:</strong> A balanced blend of theoretical knowledge and hands-on
-                                    practical training to help you convey messages effectively through imagery,
-                                    typography, and layout.</p>
-                            </div>
-                        </div>
-                        <div class="card-image">
-                            <img src="assets/images/caad-campus-01.jpg" alt="Communication Design">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="stacking-card">
-                    <div class="card-inner">
-                        <div class="card-content">
-                            <div class="card-number">04</div>
-                            <h3>B.Des. Industrial Design (4 Years)</h3>
-                            <div class="card-details">
-                                <p><strong>Course Title:</strong> Bachelor of Design</p>
-                                <p><strong>Eligibility:</strong> 12th or Diploma or any equivalent study</p>
-                                <p><strong>Affiliation:</strong> CAAD is a collaborative institution of Alagappa
-                                    University whose courses are approved by UGC of India.</p>
-                                <p><strong>Overview:</strong> The course covers principles of industrial design,
-                                    exploring concepts such as product design, engineering, innovation, and business
-                                    studies.</p>
-                            </div>
-                        </div>
-                        <div class="card-image">
-                            <img src="assets/images/facility-caad-building.jpg" alt="Industrial Design">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="stacking-card">
-                    <div class="card-inner">
-                        <div class="card-content">
-                            <div class="card-number">05</div>
-                            <h3>B.Des. Fashion Design (4 Years)</h3>
-                            <div class="card-details">
-                                <p><strong>Course Title:</strong> Bachelor of Design</p>
-                                <p><strong>Eligibility:</strong> 12th or Diploma or any equivalent study</p>
-                                <p><strong>Affiliation:</strong> CAAD is a collaborative institution of Alagappa
-                                    University whose courses are approved by UGC of India.</p>
-                                <p><strong>Overview:</strong> We equip you with the skills, knowledge, and creative
-                                    vision needed to excel in the dynamic fashion industry, from garment construction to
-                                    trend forecasting.</p>
-                            </div>
-                        </div>
-                        <div class="card-image">
-                            <img src="assets/images/uploaded_media_1769327607944.jpg" alt="Fashion Design">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="stacking-card">
-                    <div class="card-inner">
-                        <div class="card-content">
-                            <div class="card-number">06</div>
-                            <h3>D.Arch. Interior Design & Decoration (3 Years)</h3>
-                            <div class="card-details">
-                                <p><strong>Course Title:</strong> Diploma in Architecture</p>
-                                <p><strong>Eligibility:</strong> 10th Pass</p>
-                                <p><strong>Affiliation:</strong> Approved by Council of Architecture, New Delhi.
-                                    Affiliated to DOTE – Directorate of Technical Education, Tamil Nadu.</p>
-                                <p><strong>Overview:</strong> Hands-on studio courses working on design projects,
-                                    exploring building materials, construction techniques, and architectural drawing.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card-image">
-                            <img src="assets/images/caad-campus-02.jpg" alt="D.Arch Interior">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="stacking-card">
-                    <div class="card-inner">
-                        <div class="card-content">
-                            <div class="card-number">07</div>
-                            <h3>D.Des. Interior Design (4 Years)</h3>
-                            <div class="card-details">
-                                <p><strong>Course Title:</strong> Diploma in Design</p>
-                                <p><strong>Eligibility:</strong> 12th or Diploma or any equivalent study</p>
-                                <p><strong>Affiliation:</strong> CAAD is a collaborative institution of Alagappa
-                                    University whose courses are approved by UGC of India.</p>
-                                <p><strong>Overview:</strong> Understanding design fundamentals, elements of design, and
-                                    architectural drawing techniques including manual drafting and CAD.</p>
-                            </div>
-                        </div>
-                        <div class="card-image">
-                            <img src="assets/images/facilities-common-03.jpg" alt="D.Des">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="stacking-card">
-                    <div class="card-inner">
-                        <div class="card-content">
-                            <div class="card-number">08</div>
-                            <h3>M.S. (1 Year)</h3>
-                            <div class="card-details">
-                                <p><strong>Course Title:</strong> PG in Medical Architecture</p>
-                                <p><strong>Eligibility:</strong> Candidates with a valid degree in the following
-                                    discipline can apply: Architects, Civil Engineers, or Medical Professionals.</p>
-                            </div>
-                        </div>
-                        <div class="card-image">
-                            <img src="assets/images/new-building.jpg" alt="Masters Program">
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -998,7 +886,6 @@
                     <h4 class="footer-title">Programs</h4>
                     <ul>
                         <li><a href="b-arch.html">B.Arch Architecture</a></li>
-                        <li><a href="b-des.html">B.Des Interior Design</a></li>
                         <li><a href="courses.html">NATA Guidance</a></li>
                         <li><a href="admissions.html">How to Apply</a></li>
                     </ul>
@@ -1067,8 +954,7 @@
         // THEME TOGGLE SYSTEM
         // ============================================
         (function () {
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.setAttribute('data-theme', 'light');
         })();
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -1530,6 +1416,101 @@
             });
         }
 
+    </script>
+
+    <script>
+        // Index Page Modal Carousel System
+        (function () {
+            const track = document.getElementById('indexCarouselTrack');
+            if (!track) return;
+
+            const slides = track.querySelectorAll('.alumni-carousel-slide');
+            const dotsContainer = document.getElementById('indexCarouselDots');
+            const prevBtn = document.getElementById('indexCarouselPrev');
+            const nextBtn = document.getElementById('indexCarouselNext');
+
+            let currentIndex = 0;
+            let autoplayInterval = null;
+            const AUTOPLAY_DELAY = 4500;
+
+            // Create dots
+            slides.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.classList.add('alumni-carousel-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            // Create progress bar
+            const progressBar = document.createElement('div');
+            progressBar.classList.add('alumni-carousel-progress');
+            track.parentElement.appendChild(progressBar);
+
+            function goToSlide(index) {
+                slides[currentIndex].classList.remove('active');
+                dotsContainer.children[currentIndex].classList.remove('active');
+                currentIndex = index;
+                slides[currentIndex].classList.add('active');
+                dotsContainer.children[currentIndex].classList.add('active');
+                resetProgress();
+            }
+
+            function nextSlide() { goToSlide((currentIndex + 1) % slides.length); }
+            function prevSlide() { goToSlide((currentIndex - 1 + slides.length) % slides.length); }
+
+            // Progress bar animation via RAF
+            let progressStart = null;
+            let progressRAF = null;
+
+            function animateProgress(timestamp) {
+                if (!progressStart) progressStart = timestamp;
+                const progress = Math.min((timestamp - progressStart) / AUTOPLAY_DELAY, 1);
+                progressBar.style.width = (progress * 100) + '%';
+                if (progress < 1) progressRAF = requestAnimationFrame(animateProgress);
+            }
+
+            function resetProgress() {
+                progressStart = null;
+                progressBar.style.width = '0%';
+                if (progressRAF) cancelAnimationFrame(progressRAF);
+                progressRAF = requestAnimationFrame(animateProgress);
+            }
+
+            function startAutoplay() {
+                stopAutoplay();
+                resetProgress();
+                autoplayInterval = setInterval(nextSlide, AUTOPLAY_DELAY);
+            }
+
+            function stopAutoplay() {
+                if (autoplayInterval) clearInterval(autoplayInterval);
+                if (progressRAF) cancelAnimationFrame(progressRAF);
+            }
+
+            prevBtn.addEventListener('click', () => { prevSlide(); startAutoplay(); });
+            nextBtn.addEventListener('click', () => { nextSlide(); startAutoplay(); });
+
+            // Pause on hover
+            const carousel = track.parentElement;
+            carousel.addEventListener('mouseenter', stopAutoplay);
+            carousel.addEventListener('mouseleave', startAutoplay);
+
+            // Touch swipe support
+            let touchStartX = 0;
+            carousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopAutoplay();
+            }, { passive: true });
+            carousel.addEventListener('touchend', (e) => {
+                const diff = touchStartX - e.changedTouches[0].screenX;
+                if (Math.abs(diff) > 50) { if (diff > 0) nextSlide(); else prevSlide(); }
+                startAutoplay();
+            }, { passive: true });
+
+            startAutoplay();
+        })();
     </script>
 </body>
 

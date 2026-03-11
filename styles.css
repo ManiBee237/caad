@@ -1400,9 +1400,9 @@ ul {
 
 .hero-headline {
     font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 400;
-    line-height: 1.15;
+    line-height: 1.12;
     color: var(--color-white);
     margin-bottom: var(--space-md);
     letter-spacing: -0.02em;
@@ -1411,6 +1411,7 @@ ul {
 .headline-accent {
     color: var(--color-primary);
     display: block;
+    margin-top: 0.15em;
 }
 
 .hero-subheadline {
@@ -1791,6 +1792,214 @@ ul {
     font-size: 0.85rem;
     color: var(--color-primary);
     font-style: normal;
+}
+
+/* ============================================
+   ABOUT PAGE — OUR STORY (EDITORIAL SPLIT)
+   ============================================ */
+
+.about-story-section {
+    padding: 4rem 0 0;
+    background: var(--color-dark);
+}
+
+/* Top bar: label left, year badge right */
+.story-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* "Est. 1999" pill */
+.story-year-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 1rem;
+    background: var(--color-primary-light);
+    border: 1px solid rgba(184, 150, 92, 0.35);
+    border-radius: 2rem;
+    font-size: 0.82rem;
+    color: var(--color-primary);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.story-year-badge strong {
+    font-weight: 800;
+    margin-left: 0.2em;
+}
+
+/* Two-column split: 45/55 */
+.story-split {
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* ── Left column ── */
+.story-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 0.5rem;
+}
+
+.story-title {
+    font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-white);
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+/* Thin gold rule under title */
+.story-rule {
+    width: 48px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.story-left .about-text {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* Pill tags */
+.story-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.25rem;
+}
+
+.story-pill {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    border-radius: 2rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border: 1px solid rgba(184, 150, 92, 0.3);
+    transition: background 0.2s, color 0.2s;
+}
+
+.story-pill:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+/* ── Right column: image at natural size ── */
+.story-right {
+    align-self: start;
+}
+
+.story-image-wrap {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    line-height: 0;      /* removes gap under inline img */
+}
+
+.story-image-wrap img {
+    width: 100%;
+    height: auto;        /* natural proportions — no cropping */
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.story-image-wrap:hover img {
+    transform: scale(1.02);
+}
+
+/* ── Stats strip below ── */
+.story-stats-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.story-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3rem;
+    text-align: center;
+}
+
+.story-stat-num {
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.story-stat-lbl {
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 500;
+}
+
+.story-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--color-border);
+    flex-shrink: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .story-split {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .story-right {
+        order: -1; /* image first on tablet/mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-story-section {
+        padding: 3rem 0 0;
+    }
+    .story-stat-item {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .story-stats-strip {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .story-stat-divider {
+        display: none;
+    }
+    .story-stat-item {
+        width: calc(50% - 0.5rem);
+        padding: 0.75rem;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+    }
 }
 
 /* ============================================
@@ -2531,6 +2740,74 @@ ul {
     animation: scaleIn 0.6s ease-out 0.3s backwards;
 }
 
+/* ============================================
+   AWARDS YEAR-WISE TABS
+   ============================================ */
+.awards-year-tabs {
+    margin-top: 2rem;
+}
+
+.year-tab-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    padding: 0.5rem;
+    background: var(--color-dark-secondary);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+}
+
+.year-tab-btn {
+    padding: 0.6rem 1.4rem;
+    border: 2px solid transparent;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: var(--radius-lg);
+    letter-spacing: 0.5px;
+    transition: all var(--transition-fast);
+}
+
+.year-tab-btn:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+}
+
+.year-tab-btn.active {
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+    border-color: var(--color-primary);
+    font-weight: 700;
+}
+
+.year-panel {
+    display: none;
+}
+
+.year-panel.active {
+    display: block;
+    animation: awardsYearFadeIn 0.35s ease;
+}
+
+@keyframes awardsYearFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .year-tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
 /* Enhanced Scroll Animations */
 .animate-on-scroll {
     opacity: 1;
@@ -2981,26 +3258,230 @@ ul {
 
 /* Tablet Landscape */
 @media (max-width: 1024px) {
+
+    /* ---- MOBILE NAVBAR HEADER ---- */
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .nav-logo {
+        gap: 12px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .nav-logo .logo-img {
+        height: 42px;
+        flex-shrink: 0;
+    }
+
+    .nav-logo .logo-tagline {
+        font-size: 0.8rem;
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .nav-logo::after {
+        height: 30px;
+        margin: 0 2px;
+    }
+
+    /* ---- APPLY NOW BUTTON — single line ---- */
+    .nav-actions {
+        gap: 0.6rem;
+        flex-shrink: 0;
+    }
+
+    .nav-actions .btn-nav {
+        padding: 0.55rem 1rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        letter-spacing: 0.3px;
+    }
+
+    /* ---- HAMBURGER ICON — clean & ordered ---- */
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-md);
+        background: transparent;
+        border: 1px solid var(--color-border);
+        transition: background 0.3s ease, border-color 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .nav-toggle:hover {
+        background: var(--color-primary-light);
+        border-color: var(--color-primary);
+    }
+
+    .nav-toggle.active {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+    }
+
+    .hamburger {
+        width: 18px;
+        height: 2px;
+        background: var(--color-white);
+        border-radius: 2px;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        width: 18px;
+        height: 2px;
+        border-radius: 2px;
+    }
+
+    .hamburger::before {
+        top: -6px;
+    }
+
+    .hamburger::after {
+        top: 6px;
+    }
+
+    .nav-toggle.active .hamburger {
+        background: transparent;
+    }
+
+    .nav-toggle.active .hamburger::before,
+    .nav-toggle.active .hamburger::after {
+        background: #fff;
+    }
+
+    /* ---- MOBILE SIDEBAR — Professional Redesign ---- */
     .nav-menu {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 280px;
+        width: 310px;
+        max-width: 85vw;
         height: 100vh;
-        background: var(--color-dark-secondary);
+        height: 100dvh;
+        background: linear-gradient(180deg, #1B3A5F 0%, #142231 100%);
         flex-direction: column;
-        padding: 100px var(--space-xl) var(--space-xl);
-        gap: var(--space-md);
-        transition: right var(--transition-smooth);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+        padding: 0;
+        gap: 0;
+        transition: right 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -16px 0 48px rgba(0, 0, 0, 0.35);
+        z-index: 1000;
+        overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     .nav-menu.active {
         right: 0;
     }
 
-    .nav-toggle {
+    /* Sidebar header area with brand */
+    .nav-menu::before {
+        content: 'CAAD';
+        display: block;
+        padding: 28px 28px 20px;
+        font-family: var(--font-serif);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #B8965C;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        margin-bottom: 8px;
+        flex-shrink: 0;
+    }
+
+    /* Nav links inside sidebar — force light text on dark bg */
+    .nav-menu .nav-link {
         display: flex;
+        align-items: center;
+        padding: 14px 28px;
+        font-size: 0.92rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85) !important;
+        border-left: 3px solid transparent;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    .nav-menu .nav-link:hover {
+        background: rgba(184, 150, 92, 0.1);
+        color: #B8965C !important;
+        border-left-color: #B8965C;
+        padding-left: 32px;
+    }
+
+    .nav-menu .nav-link.active {
+        background: rgba(184, 150, 92, 0.12);
+        color: #B8965C !important;
+        border-left-color: #B8965C;
+        font-weight: 600;
+    }
+
+    /* Remove underline effect in sidebar */
+    .nav-menu .nav-link::after {
+        display: none;
+    }
+
+    /* Dropdown in sidebar */
+    .nav-menu .nav-dropdown {
+        width: 100%;
+    }
+
+    .nav-menu .nav-link-dropdown {
+        justify-content: space-between;
+    }
+
+    .nav-menu .nav-link-dropdown .dropdown-icon {
+        stroke: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-menu .dropdown-menu {
+        position: static !important;
+        background: rgba(0, 0, 0, 0.18);
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 4px 0;
+        margin: 0;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: block;
+    }
+
+    .nav-menu .dropdown-item {
+        padding: 10px 28px 10px 44px;
+        font-size: 0.83rem;
+        color: rgba(255, 255, 255, 0.55) !important;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu .dropdown-item:hover {
+        color: #B8965C !important;
+        background: rgba(184, 150, 92, 0.08);
+        padding-left: 48px;
+    }
+
+    /* Hamburger lines — force white for light theme */
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        background: var(--color-text) !important;
+    }
+
+    .nav-toggle.active .hamburger {
+        background: transparent !important;
+    }
+
+    .nav-toggle.active .hamburger::before,
+    .nav-toggle.active .hamburger::after {
+        background: #fff !important;
     }
 
     .about-grid {
@@ -3236,6 +3717,87 @@ button:focus-visible {
     color: var(--color-primary);
 }
 
+/* ============================================
+   ABOUT PAGE — IMAGE BANNER
+   ============================================ */
+
+.about-page-banner {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Full-bleed background image */
+.about-banner-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.about-banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    display: block;
+}
+
+/* Dark gradient overlay so text is legible */
+.about-banner-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.78) 0%,
+        rgba(0, 0, 0, 0.45) 45%,
+        rgba(0, 0, 0, 0.15) 100%
+    );
+}
+
+/* Content sits above overlay */
+.about-banner-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 120px;   /* clear the fixed nav */
+    padding-bottom: 3.5rem;
+    text-align: left;
+}
+
+/* Override page-header centered breadcrumb + text for banner */
+.about-page-banner .breadcrumb {
+    justify-content: flex-start;
+}
+
+.about-page-banner .breadcrumb a,
+.about-page-banner .breadcrumb span {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.about-page-banner .breadcrumb a:hover {
+    color: var(--color-primary);
+}
+
+.about-page-banner .page-title {
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.about-page-banner .page-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    .about-page-banner {
+        min-height: 360px;
+    }
+    .about-banner-content {
+        padding-bottom: 2.5rem;
+    }
+}
+
 /* Page Header */
 .page-header {
     background: linear-gradient(135deg, var(--color-dark-secondary), var(--color-dark-tertiary));
@@ -3396,15 +3958,25 @@ button:focus-visible {
 }
 
 .affiliation-logo {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+    width: 88px;
+    height: 88px;
     margin: 0 auto var(--space-sm);
-    border-radius: var(--radius-md);
-    background: white;
-    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-lg);
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
 
+.affiliation-logo img,
+.affiliation-logo svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 
 .leader-card h3 {
     font-size: 1.1rem;
@@ -3424,42 +3996,148 @@ button:focus-visible {
     line-height: 1.6;
 }
 
-/* Affiliations Grid */
+/* Affiliations Grid — 5 cards, 3+2 centred layout */
 .affiliations-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
 }
+
+/* Row 1: 3 cards each spanning 2 of 6 columns */
+.affiliation-card:nth-child(-n+3) { grid-column: span 2; }
+
+/* Row 2: 2 cards centred (cols 2–3 and cols 4–5) */
+.affiliation-card:nth-child(4)    { grid-column: 2 / span 2; }
+.affiliation-card:nth-child(5)    { grid-column: 4 / span 2; }
 
 .affiliation-card {
     background: var(--color-dark);
-    padding: var(--space-xl);
     border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    position: relative;
+}
+
+.affiliation-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--color-primary);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 1;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(184, 150, 92, 0.3);
+}
+
+.affiliation-card:hover::before { opacity: 1; }
+
+/* Big white image panel */
+.aff-img-area {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2.5rem;
+    height: 190px;
+    border-bottom: 1px solid var(--color-border);
+    flex-shrink: 0;
+    transition: background 0.25s ease;
+}
+
+.affiliation-card:hover .aff-img-area { background: #f8f6f2; }
+
+.aff-img-area img {
+    max-height: 140px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.affiliation-card:hover .aff-img-area img { transform: scale(1.06); }
+
+/* Text body */
+.aff-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    flex: 1;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
 }
 
 .affiliation-card h4 {
-    font-family: var(--font-serif);
-    font-size: 1.25rem;
+    font-size: 1.05rem;
+    font-weight: 700;
     color: var(--color-white);
-    margin-bottom: var(--space-xs);
+    margin: 0;
+    line-height: 1.3;
 }
 
 .affiliation-card p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--color-text-secondary);
-    margin-bottom: var(--space-sm);
+    line-height: 1.65;
+    margin: 0;
+    flex: 1;
 }
 
+/* Coloured status pill */
+.affiliation-status {
+    display: inline-block;
+    padding: 0.22rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.affiliation-status.affiliated  { background: rgba(59,130,246,0.12);  color: #3B82F6; border: 1px solid rgba(59,130,246,0.25); }
+.affiliation-status.approved    { background: rgba(34,197,94,0.12);   color: #16A34A; border: 1px solid rgba(34,197,94,0.25);  }
+.affiliation-status.accredited  { background: rgba(168,85,247,0.12);  color: #9333EA; border: 1px solid rgba(168,85,247,0.25); }
+.affiliation-status.certified   { background: rgba(234,179,8,0.12);   color: #B45309; border: 1px solid rgba(234,179,8,0.25);  }
+.affiliation-status.recognised  { background: rgba(249,115,22,0.12);  color: #EA6D00; border: 1px solid rgba(249,115,22,0.25); }
+
+/* Gold code tag */
 .affiliation-code {
     display: inline-block;
     background: var(--color-primary-light);
     color: var(--color-primary);
-    padding: 0.4rem 0.8rem;
+    padding: 0.35rem 0.9rem;
     border-radius: var(--radius-sm);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .affiliations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .affiliation-card:nth-child(-n+3),
+    .affiliation-card:nth-child(4),
+    .affiliation-card:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 560px) {
+    .affiliations-grid { grid-template-columns: 1fr; }
+    .aff-img-area      { height: 160px; }
 }
 
 /* Courses Grid 2 columns */
@@ -7342,7 +8020,7 @@ button:focus-visible {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-bottom: 2.5rem !important;
+    margin-bottom: 0 !important;
 }
 
 .modal-body .btn {
@@ -8291,4 +8969,1533 @@ button:focus-visible {
         display: none;
         /* Auto-hide controls on mobile, swipe is better */
     }
+}
+
+/* ============================================
+   ALUMNI PAGE - Cards, Blog, Stats, Animations
+   ============================================ */
+
+/* Alumni Profile Grid */
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.alumni-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-color 0.4s ease;
+}
+
+.alumni-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.alumni-card-inner {
+    position: relative;
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg) var(--space-lg);
+}
+
+/* Avatar */
+.alumni-avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto var(--space-md);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--color-primary);
+    box-shadow: 0 8px 24px rgba(184, 150, 92, 0.25);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.5s ease,
+                border-color 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.alumni-card:hover .alumni-avatar {
+    transform: scale(1.08);
+    box-shadow: 0 12px 32px rgba(184, 150, 92, 0.4);
+}
+
+.alumni-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.alumni-card:hover .alumni-avatar img {
+    transform: scale(1.1);
+}
+
+.alumni-avatar-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+/* Hover Icons Row */
+.alumni-hover-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: var(--space-md);
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease 0.1s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s;
+    position: relative;
+    z-index: 2;
+}
+
+.alumni-card:hover .alumni-hover-icons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alumni-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-decoration: none;
+}
+
+.alumni-icon-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.alumni-icon-btn:hover {
+    background: var(--color-primary);
+    color: #fff;
+    transform: scale(1.15);
+}
+
+.alumni-icon-btn:nth-child(1) { transition-delay: 0.05s; }
+.alumni-icon-btn:nth-child(2) { transition-delay: 0.1s; }
+.alumni-icon-btn:nth-child(3) { transition-delay: 0.15s; }
+
+/* Alumni Info */
+.alumni-info {
+    position: relative;
+    z-index: 2;
+}
+
+.alumni-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 4px 12px;
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 100px;
+    margin-bottom: var(--space-sm);
+    letter-spacing: 0.3px;
+}
+
+.alumni-badge svg {
+    flex-shrink: 0;
+}
+
+.alumni-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.alumni-role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 2px;
+}
+
+.alumni-class {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.alumni-bio {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Decorative top accent on card */
+.alumni-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover), var(--color-primary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 3;
+}
+
+.alumni-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Subtle shimmer on hover */
+.alumni-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(184, 150, 92, 0.04), transparent);
+    transition: left 0.8s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.alumni-card:hover::after {
+    left: 100%;
+}
+
+
+/* ============================================
+   ALUMNI BLOG CARDS
+   ============================================ */
+.alumni-blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.alumni-blog-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.5s ease,
+                border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.alumni-blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 0 0 1px var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* Featured card spans full width */
+.alumni-blog-featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.alumni-blog-featured .alumni-blog-img {
+    min-height: 300px;
+}
+
+/* Blog image area */
+.alumni-blog-img {
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-dark-secondary) 0%, var(--color-dark-tertiary) 100%);
+}
+
+.alumni-blog-img-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    opacity: 0.3;
+    transition: opacity 0.4s ease, transform 0.6s ease;
+}
+
+.alumni-blog-card:hover .alumni-blog-img-placeholder {
+    opacity: 0.15;
+    transform: scale(1.1);
+}
+
+/* Blog overlay */
+.alumni-blog-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-md);
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.alumni-blog-card:hover .alumni-blog-overlay {
+    opacity: 1;
+}
+
+.alumni-blog-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 5px 14px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    width: fit-content;
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s, opacity 0.3s ease 0.1s;
+}
+
+.alumni-blog-card:hover .alumni-blog-category {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.alumni-blog-hover-action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    align-self: flex-end;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    padding: 8px 16px;
+    border-radius: 100px;
+    transform: translateY(8px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s,
+                opacity 0.3s ease 0.15s,
+                background 0.3s ease;
+    cursor: pointer;
+}
+
+.alumni-blog-card:hover .alumni-blog-hover-action {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.alumni-blog-hover-action:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+/* Blog content */
+.alumni-blog-content {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.alumni-blog-meta {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.alumni-blog-date,
+.alumni-blog-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.alumni-blog-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.alumni-blog-card:hover .alumni-blog-content h3 {
+    color: var(--color-primary);
+}
+
+.alumni-blog-content p {
+    font-size: 0.88rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+    flex: 1;
+}
+
+.alumni-blog-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: gap 0.3s ease, color 0.3s ease;
+}
+
+.alumni-blog-link:hover {
+    gap: 0.75rem;
+    color: var(--color-primary-dark);
+}
+
+.alumni-blog-link svg {
+    transition: transform 0.3s ease;
+}
+
+.alumni-blog-link:hover svg {
+    transform: translateX(3px);
+}
+
+
+/* ============================================
+   ALUMNI STATS SECTION - FLIP CARDS
+   ============================================ */
+.alumni-stats-section {
+    background: linear-gradient(135deg, #1B3A5F 0%, #142231 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.alumni-stats-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(184, 150, 92, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 80% 50%, rgba(184, 150, 92, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.alumni-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    position: relative;
+    z-index: 1;
+}
+
+/* Flip card container — sets the 3D perspective */
+.alumni-stat-flip {
+    perspective: 1000px;
+    height: 280px;
+}
+
+/* Inner wrapper — holds both faces and rotates */
+.alumni-stat-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.alumni-stat-flip:hover .alumni-stat-flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Shared face styles */
+.alumni-stat-front,
+.alumni-stat-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-xl) var(--space-md);
+}
+
+/* ---- FRONT FACE ---- */
+.alumni-stat-front {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 2;
+}
+
+.alumni-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-md);
+    border-radius: 50%;
+    background: rgba(184, 150, 92, 0.12);
+    color: #B8965C;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.4s ease;
+}
+
+.alumni-stat-number {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.alumni-stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+}
+
+/* "Hover for details" hint */
+.alumni-stat-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: auto;
+    padding-top: var(--space-xs);
+    animation: hintPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+}
+
+/* ---- BACK FACE ---- */
+.alumni-stat-back {
+    background: linear-gradient(135deg, rgba(184, 150, 92, 0.15) 0%, rgba(184, 150, 92, 0.05) 100%);
+    border: 1px solid rgba(184, 150, 92, 0.3);
+    transform: rotateY(180deg);
+    padding: var(--space-lg) var(--space-md);
+}
+
+.alumni-stat-back-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto var(--space-sm);
+    border-radius: 50%;
+    background: rgba(184, 150, 92, 0.2);
+    color: #B8965C;
+}
+
+.alumni-stat-back h4 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: var(--space-sm);
+}
+
+.alumni-stat-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.alumni-stat-details li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.alumni-stat-details li:last-child {
+    border-bottom: none;
+}
+
+.alumni-stat-details li svg {
+    flex-shrink: 0;
+    color: #B8965C;
+    margin-top: 2px;
+}
+
+
+/* ============================================
+   ALUMNI PAGE RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .alumni-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .alumni-blog-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .alumni-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .alumni-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .alumni-blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .alumni-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .alumni-stat-flip {
+        height: 260px;
+    }
+
+    .alumni-stat-number {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .alumni-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .alumni-stat-flip {
+        height: 250px;
+    }
+}
+
+
+/* ============================================
+   MOBILE HEADER & SECTION ALIGNMENT FIXES
+   ============================================ */
+
+/* -- Mobile: section headers center-aligned for cleaner look -- */
+@media (max-width: 768px) {
+    .section-header {
+        text-align: center;
+        margin-bottom: var(--space-lg);
+    }
+
+    .section-header .section-label {
+        text-align: center;
+    }
+
+    .section-header .section-title {
+        text-align: center;
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .section-header .section-title::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-header .section-subtitle {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .page-header {
+        padding: calc(70px + var(--space-lg)) 0 var(--space-lg);
+    }
+
+    .page-title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .page-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header .section-title {
+        font-size: 1.6rem;
+    }
+
+    .page-title {
+        font-size: 1.7rem;
+    }
+
+    .nav-logo .logo-tagline {
+        display: none;
+    }
+
+    .nav-logo::after {
+        display: none;
+    }
+
+    .nav-logo .logo-img {
+        height: 38px;
+    }
+
+    .nav-actions .btn-nav {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* ================================================
+   ALUMNI CAMPUS CAROUSEL
+   ================================================ */
+
+.alumni-carousel-section {
+    background: linear-gradient(180deg, #f8f9fc 0%, #f0f2f5 100%);
+}
+
+.alumni-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(27, 58, 95, 0.15);
+    background: #1B3A5F;
+}
+
+.alumni-carousel-track {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+/* Slides */
+.alumni-carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.alumni-carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.alumni-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Caption overlay */
+.alumni-carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 32px 28px;
+    background: linear-gradient(0deg, rgba(10, 20, 35, 0.85) 0%, rgba(10, 20, 35, 0.4) 60%, transparent 100%);
+    color: #fff;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: transform 0.5s ease 0.2s, opacity 0.5s ease 0.2s;
+}
+
+.alumni-carousel-slide.active .alumni-carousel-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.alumni-carousel-caption h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    margin: 0 0 6px;
+    color: #fff;
+}
+
+.alumni-carousel-caption p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
+/* Navigation buttons */
+.alumni-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.alumni-carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.alumni-carousel-prev {
+    left: 16px;
+}
+
+.alumni-carousel-next {
+    right: 16px;
+}
+
+/* Dots */
+.alumni-carousel-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.alumni-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.alumni-carousel-dot.active {
+    background: #C8A96E;
+    width: 28px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(200, 169, 110, 0.5);
+}
+
+.alumni-carousel-dot:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Carousel progress bar */
+.alumni-carousel-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #C8A96E, #E8D5A8);
+    z-index: 10;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+/* Carousel responsive */
+@media (max-width: 768px) {
+    .alumni-carousel {
+        border-radius: 12px;
+    }
+
+    .alumni-carousel-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .alumni-carousel-prev {
+        left: 10px;
+    }
+
+    .alumni-carousel-next {
+        right: 10px;
+    }
+
+    .alumni-carousel-caption {
+        padding: 30px 20px 22px;
+    }
+
+    .alumni-carousel-caption h4 {
+        font-size: 1.1rem;
+    }
+
+    .alumni-carousel-caption p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .alumni-carousel-btn {
+        width: 34px;
+        height: 34px;
+    }
+
+    .alumni-carousel-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .alumni-carousel-caption h4 {
+        font-size: 1rem;
+    }
+
+    .alumni-carousel-dots {
+        bottom: 10px;
+        gap: 7px;
+    }
+
+    .alumni-carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .alumni-carousel-dot.active {
+        width: 22px;
+    }
+}
+
+/* ================================================
+   ADMISSIONS BLINKING BADGE
+   ================================================ */
+
+.admission-blink-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(200, 56, 56, 0.1), rgba(200, 56, 56, 0.05));
+    border: 1.5px solid rgba(200, 56, 56, 0.25);
+    margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #C83838;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    animation: admissionBadgePulse 2s ease-in-out infinite;
+}
+
+.blink-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #C83838;
+    display: inline-block;
+    animation: blinkDot 1.2s ease-in-out infinite;
+    box-shadow: 0 0 6px rgba(200, 56, 56, 0.5);
+}
+
+@keyframes blinkDot {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 6px rgba(200, 56, 56, 0.5);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(0.7);
+        box-shadow: 0 0 2px rgba(200, 56, 56, 0.2);
+    }
+}
+
+@keyframes admissionBadgePulse {
+    0%, 100% {
+        border-color: rgba(200, 56, 56, 0.25);
+        box-shadow: 0 0 0 0 rgba(200, 56, 56, 0);
+    }
+    50% {
+        border-color: rgba(200, 56, 56, 0.5);
+        box-shadow: 0 0 15px rgba(200, 56, 56, 0.1);
+    }
+}
+
+/* Modal override for alumni admission with Carousel */
+.alumni-admission-modal {
+    padding: 0 !important;
+    max-width: 520px !important;
+    overflow: hidden;
+    max-height: 92vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.alumni-admission-modal::-webkit-scrollbar {
+    display: none;
+}
+
+/* Carousel wrapper inside modal — sits at the top, edge to edge */
+.modal-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    background: #1B3A5F;
+    flex-shrink: 0;
+}
+
+.modal-carousel-wrapper .alumni-carousel-track {
+    aspect-ratio: 16 / 7;
+}
+
+/* Close button floats above carousel */
+.alumni-admission-modal .modal-close {
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    top: 14px;
+    right: 14px;
+}
+
+.alumni-admission-modal .modal-close:hover {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Info body below carousel */
+.alumni-admission-modal .modal-body {
+    padding: 1.1rem 1.75rem 1.5rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.alumni-admission-modal .modal-body p {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+}
+
+.alumni-admission-modal .modal-body h2 {
+    background: linear-gradient(135deg, #1B3A5F, #C8A96E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.alumni-admission-modal .modal-logo {
+    margin-bottom: 0.4rem;
+    max-width: 90px;
+}
+
+.alumni-admission-modal .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #C8A96E, #B8944E);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(200, 169, 110, 0.35);
+}
+
+.alumni-admission-modal .btn-primary:hover {
+    background: linear-gradient(135deg, #B8944E, #A8843E);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(200, 169, 110, 0.45);
+}
+
+/* Responsive tweaks for modal carousel */
+@media (max-width: 680px) {
+    .alumni-admission-modal {
+        max-width: 96vw !important;
+    }
+
+    .modal-carousel-wrapper .alumni-carousel-track {
+        aspect-ratio: 16 / 9;
+    }
+
+    .alumni-admission-modal .modal-body {
+        padding: 1.5rem 1.5rem 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .alumni-admission-modal .modal-body {
+        padding: 1.25rem 1.25rem 1.5rem;
+    }
+
+    .modal-carousel-wrapper .alumni-carousel-track {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+/* ================================================
+   ALUMNI STORY SIDE CTA PANEL
+   ================================================ */
+
+/* Backdrop overlay */
+.alumni-story-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 35, 0);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    z-index: 9998;
+    pointer-events: none;
+    transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                backdrop-filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.alumni-story-backdrop.active {
+    background: rgba(10, 20, 35, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Side panel */
+.alumni-story-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 460px;
+    max-width: 92vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
+    z-index: 9999;
+    transform: translateX(110%);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.alumni-story-panel.active {
+    transform: translateX(0);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.alumni-story-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(27, 58, 95, 0.12);
+    background: rgba(255, 255, 255, 0.9);
+    color: #1B3A5F;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.alumni-story-close:hover {
+    background: #1B3A5F;
+    color: #fff;
+    border-color: #1B3A5F;
+    transform: rotate(90deg);
+}
+
+/* Header section */
+.alumni-story-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 36px 32px 24px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s;
+}
+
+.alumni-story-panel.active .alumni-story-header {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Avatar */
+.alumni-story-avatar {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1B3A5F, #C8A96E);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    box-shadow: 0 4px 20px rgba(27, 58, 95, 0.25);
+    position: relative;
+}
+
+.alumni-story-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.alumni-story-avatar::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    border: 2px solid rgba(200, 169, 110, 0.5);
+    pointer-events: none;
+}
+
+/* Meta info */
+.alumni-story-meta {
+    flex: 1;
+    min-width: 0;
+}
+
+.alumni-story-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.45rem;
+    color: #1B3A5F;
+    margin: 0 0 4px;
+    line-height: 1.25;
+}
+
+.alumni-story-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    color: #6B7B8D;
+    margin: 0 0 12px;
+    font-weight: 500;
+}
+
+/* Tags */
+.alumni-story-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.alumni-story-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.alumni-story-tag svg {
+    flex-shrink: 0;
+}
+
+.alumni-story-tag-location {
+    background: rgba(27, 58, 95, 0.08);
+    color: #1B3A5F;
+}
+
+.alumni-story-tag-class {
+    background: rgba(200, 169, 110, 0.15);
+    color: #9A7B3C;
+}
+
+.alumni-story-tag-category {
+    background: rgba(46, 125, 50, 0.1);
+    color: #2E7D32;
+}
+
+/* Divider */
+.alumni-story-divider {
+    height: 1px;
+    margin: 0 32px;
+    background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.4), rgba(27, 58, 95, 0.15), transparent);
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 0.4s ease 0.25s, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.25s;
+}
+
+.alumni-story-panel.active .alumni-story-divider {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* Body / Story content */
+.alumni-story-body {
+    flex: 1;
+    padding: 24px 32px;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.4s ease 0.3s, transform 0.4s ease 0.3s;
+}
+
+.alumni-story-panel.active .alumni-story-body {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alumni-story-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.alumni-story-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.alumni-story-body::-webkit-scrollbar-thumb {
+    background: rgba(27, 58, 95, 0.15);
+    border-radius: 10px;
+}
+
+.alumni-story-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(27, 58, 95, 0.3);
+}
+
+.alumni-story-body-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.05rem;
+    color: #1B3A5F;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.alumni-story-body-title svg {
+    color: #C8A96E;
+}
+
+.alumni-story-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: #4A5568;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Footer CTA buttons */
+.alumni-story-footer {
+    padding: 20px 32px 28px;
+    display: flex;
+    gap: 12px;
+    border-top: 1px solid rgba(27, 58, 95, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease 0.4s, transform 0.4s ease 0.4s;
+}
+
+.alumni-story-panel.active .alumni-story-footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alumni-story-cta-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #1B3A5F, #2A5A8F);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(27, 58, 95, 0.25);
+    letter-spacing: 0.02em;
+}
+
+.alumni-story-cta-btn:hover {
+    background: linear-gradient(135deg, #142E4A, #1B3A5F);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(27, 58, 95, 0.35);
+}
+
+.alumni-story-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: transparent;
+    color: #1B3A5F;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1.5px solid rgba(27, 58, 95, 0.2);
+    transition: all 0.3s ease;
+    letter-spacing: 0.02em;
+}
+
+.alumni-story-secondary-btn:hover {
+    background: rgba(27, 58, 95, 0.05);
+    border-color: rgba(27, 58, 95, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Make blog card clickable areas more obvious */
+.alumni-blog-hover-action {
+    cursor: pointer;
+}
+
+.alumni-blog-link {
+    cursor: pointer;
+}
+
+/* Responsive side panel */
+@media (max-width: 768px) {
+    .alumni-story-panel {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .alumni-story-header {
+        padding: 32px 24px 20px;
+        gap: 16px;
+    }
+
+    .alumni-story-avatar {
+        width: 66px;
+        height: 66px;
+        min-width: 66px;
+        font-size: 1.35rem;
+    }
+
+    .alumni-story-name {
+        font-size: 1.25rem;
+    }
+
+    .alumni-story-divider {
+        margin: 0 24px;
+    }
+
+    .alumni-story-body {
+        padding: 20px 24px;
+    }
+
+    .alumni-story-footer {
+        padding: 16px 24px 24px;
+        flex-direction: column;
+    }
+
+    .alumni-story-text {
+        font-size: 0.88rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .alumni-story-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 20px 16px;
+    }
+
+    .alumni-story-tags {
+        justify-content: center;
+    }
+
+    .alumni-story-close {
+        top: 12px;
+        right: 12px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .alumni-story-divider {
+        margin: 0 20px;
+    }
+
+    .alumni-story-body {
+        padding: 16px 20px;
+    }
+
+    .alumni-story-footer {
+        padding: 14px 20px 20px;
+    }
+
+    .alumni-story-name {
+        font-size: 1.15rem;
+    }
+}
+
+/* Body scroll lock when panel is open */
+body.alumni-story-open {
+    overflow: hidden;
 }

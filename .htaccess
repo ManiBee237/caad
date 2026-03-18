@@ -1,0 +1,9 @@
+# Block direct access to sensitive files
+<FilesMatch "^mail-config\.php$">
+    Require all denied
+</FilesMatch>
+
+# Block access to log files
+<FilesMatch "\.log$">
+    Require all denied
+</FilesMatch>

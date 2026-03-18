@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CAAD Chennai Facilities - New City Campus at Parivakkam with A/C classrooms, workshops, labs, library, and hostel. Near Poonamallee Metro Station.">
+    <title>Facilities | CAAD Chennai</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Premium Architectural Loader -->
+    <div class="arch-loader-overlay" id="archLoader">
+        <div class="iso-city">
+            <!-- 9 Blocks for a 3x3 Grid -->
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+        </div>
+        <div class="loader-text-container">
+            <h2 class="loader-title">Building Dreams</h2>
+            <p class="loader-subtitle">Chennai Academy of Architecture & Design</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.php" class="nav-logo">
+                <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="logo-img">
+                <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="about.php" class="nav-link">About</a>
+                <a href="b-arch.php" class="nav-link">Courses</a>
+                <a href="admissions.php" class="nav-link">Admissions</a>
+                <div class="nav-dropdown">
+                    <a href="facilities.php" class="nav-link nav-link-dropdown active">
+                        Facilities
+                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="international-exposure.php" class="dropdown-item">International Exposure</a>
+                        <a href="leisure-lifestyle.php" class="dropdown-item">Leisure & Lifestyle at CAAD</a>
+                        <a href="campus.php" class="dropdown-item">Campus</a>
+                        <a href="lab-facilities.php" class="dropdown-item">Lab Facilities & Workshops</a>
+                        <a href="library.php" class="dropdown-item">Library</a>
+                        <a href="transport.php" class="dropdown-item">Transport</a>
+                        <a href="hostel.php" class="dropdown-item">Hostel</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="placement.php" class="nav-link nav-link-dropdown">
+                        Placement
+                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="job-placement.php" class="dropdown-item">Job Placement</a>
+                        <a href="internship-placement.php" class="dropdown-item">Internship Placement</a>
+                        <a href="higher-education.php" class="dropdown-item">Higher Education</a>
+                        <a href="openings.php" class="dropdown-item">Openings</a>
+                    </div>
+                </div>
+                <a href="alumni.php" class="nav-link">Alumni</a>
+                <a href="events.php" class="nav-link">Events</a>
+                <a href="contact.php" class="nav-link">Contact</a>
+                <a href="admissions.php" class="nav-link">NATA</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="admissions.php#apply" class="btn btn-nav">Apply Now</a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.php">Home</a>
+                <span>/</span>
+                <span>Facilities</span>
+            </div>
+            <h1 class="page-title">Campus & Facilities</h1>
+            <p class="page-subtitle">State-of-the-art infrastructure for design education</p>
+        </div>
+    </section>
+
+    <!-- Academic Split Hero -->
+    <section class="section">
+        <div class="container">
+            <div class="split-hero">
+                <div class="split-hero-content">
+                    <span class="overline">Academic Excellence</span>
+                    <h2>Elite Academicians Guiding Your Journey</h2>
+                    <p>An elite panel of motivated academicians have enrolled with Chennai Academy of Architecture and Design to guide the pupils in their journey through architecture education.</p>
+                    <p>Well researched teaching methodology at par with international standards to equip learners with necessary competencies for leadership roles in construction and design sectors.</p>
+                </div>
+                <div class="split-hero-visual">
+                    <img src="assets/images/new-building.jpg" alt="CAAD City Campus">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exposure - Reversed Split Hero -->
+    <section class="section" style="background: var(--color-dark-secondary);">
+        <div class="container">
+            <div class="split-hero reversed">
+                <div class="split-hero-content">
+                    <span class="overline">Exposure</span>
+                    <h2>Holistic Development Beyond Academics</h2>
+                    <p>Relevant additional training will be given to students in the areas of soft skills enhancement, management and team work to survive the competition in the market.</p>
+                    <p>At CAAD, we are determined to provide the conducive environment and exposure for all students to evolve as balanced individuals with sound ethics and morals.</p>
+                </div>
+                <div class="split-hero-visual">
+                    <img src="assets/images/facility-learning-corridor.jpg" alt="Learning Corridor">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Feature List -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Infrastructure</span>
+                <h2 class="section-title">What Sets Us Apart</h2>
+            </div>
+
+            <div class="intro-text-block">
+                <p>The Management team at CAAD strongly believes that the Infrastructure equally important as the teaching resources to achieve the set goals for any Institution.</p>
+            </div>
+
+            <ul class="feature-list-styled">
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Standalone campus designed exclusively for architecture education</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Creative learning environment fostering innovation</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Hands-on construction site exposure for practical learning</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Multi-level air-conditioned library with green terrace extension</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>National and international journal access</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Equipped workshop facilities for model-making and construction</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Separate boy and girl hostels on campus</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Wi-Fi enabled facilities throughout the campus</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Air-conditioned transportation across Chennai</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>International university MOUs for exchange programs</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Specialised annual foreign campus training programmes</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Campus Gallery -->
+    <section class="section" style="background: var(--color-dark-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Gallery</span>
+                <h2 class="section-title">Campus Life</h2>
+            </div>
+
+            <div class="showcase-wrapper">
+                <div class="showcase-slider">
+                    <div class="showcase-slide">
+                        <img src="assets/images/caad-campus-01.jpg" alt="CAAD Campus Building">
+                        <div class="slide-info"><h4>Campus Building</h4><p>Modern architectural design</p></div>
+                    </div>
+                    <div class="showcase-slide">
+                        <img src="assets/images/caad-library-3.jpg" alt="CAAD Library">
+                        <div class="slide-info"><h4>Library</h4><p>Air-conditioned resource centre</p></div>
+                    </div>
+                    <div class="showcase-slide">
+                        <img src="assets/images/caad-ac-auditorium.jpg" alt="CAAD Auditorium">
+                        <div class="slide-info"><h4>AC Auditorium</h4><p>Events &amp; presentations</p></div>
+                    </div>
+                    <div class="showcase-slide">
+                        <img src="assets/images/facility-learning-corridor.jpg" alt="Learning Corridor">
+                        <div class="slide-info"><h4>Learning Corridor</h4><p>Design-inspired walkways</p></div>
+                    </div>
+                    <div class="showcase-slide">
+                        <img src="assets/images/caad-campus-material-store.jpg" alt="Material Store">
+                        <div class="slide-info"><h4>Material Store</h4><p>Resources for making</p></div>
+                    </div>
+                    <div class="showcase-slide">
+                        <img src="assets/images/caad-campus-02.jpg" alt="CAAD Campus View">
+                        <div class="slide-info"><h4>Campus View</h4><p>Where ideas come alive</p></div>
+                    </div>
+                    <div class="showcase-slide">
+                        <img src="assets/images/home-hostel-img.jpg" alt="Hostel Facilities">
+                        <div class="slide-info"><h4>Hostel</h4><p>Home away from home</p></div>
+                    </div>
+                    <div class="showcase-slide">
+                        <img src="assets/images/leisure-lifestyle-caad-14.jpg" alt="Campus Lifestyle">
+                        <div class="slide-info"><h4>Campus Lifestyle</h4><p>Work-play balance</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Facilities - Stat Strip -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Explore</span>
+                <h2 class="section-title">Explore Our Facilities</h2>
+            </div>
+
+            <div class="stat-strip">
+                <a href="international-exposure.php" class="stat-item" style="text-decoration:none; cursor:pointer;">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                    </div>
+                    <h4>International Exposure</h4>
+                    <p>International Studios &amp; exchange programmes</p>
+                </a>
+                <a href="campus.php" class="stat-item" style="text-decoration:none; cursor:pointer;">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    </div>
+                    <h4>Campus</h4>
+                    <p>Modern infrastructure &amp; studios</p>
+                </a>
+                <a href="lab-facilities.php" class="stat-item" style="text-decoration:none; cursor:pointer;">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    </div>
+                    <h4>Labs &amp; Workshops</h4>
+                    <p>Specialised hands-on facilities</p>
+                </a>
+                <a href="library.php" class="stat-item" style="text-decoration:none; cursor:pointer;">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                    </div>
+                    <h4>Library</h4>
+                    <p>Air-conditioned resource centre</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Visit Our Campus</h2>
+                <p class="cta-text">Experience our facilities firsthand. Schedule a campus tour today.</p>
+                <div class="cta-buttons">
+                    <a href="contact.php" class="btn btn-white">Contact Us</a>
+                    <a href="admissions.php" class="btn btn-outline-white">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.php" class="footer-logo">
+                        <img src="assets/images/caad_logo_footer.png" alt="CAAD Logo" class="footer-logo-img">
+                        <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
+                    </a>
+                    <p class="footer-description">Shaping the future of architecture and design education since 2014.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="courses.php">Programs</a></li>
+                        <li><a href="admissions.php">Admissions</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact</h4>
+                    <address>
+                        <p>CAAD City Campus, Parivakkam, Poonamallee Bypass. Next to CMRL Poonamallee Metro Depot, Chennai – 600 056</p>
+                        <p>+91 97105 54545 | admin@caad.ac.in</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chennai Academy of Architecture and Design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle System
+        (function () {
+            document.documentElement.setAttribute('data-theme', 'light');
+        })();
+
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        }
+
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+
+    </script>
+    <script>
+        // Remove Loader on Page Load
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('archLoader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.classList.add('fade-out');
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 600);
+                }, 1000); // Minimum view time
+            }
+        });
+    </script>
+</body>
+
+</html>

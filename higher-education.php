@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CAAD Higher Education - Our graduates pursue advanced degrees at top universities in the UK, USA, and across the globe.">
+    <title>Higher Education | CAAD Chennai</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Premium Architectural Loader -->
+    <div class="arch-loader-overlay" id="archLoader">
+        <div class="iso-city">
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+        </div>
+        <div class="loader-text-container">
+            <h2 class="loader-title">Building Dreams</h2>
+            <p class="loader-subtitle">Chennai Academy of Architecture & Design</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.php" class="nav-logo">
+                <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="logo-img">
+                <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="about.php" class="nav-link">About</a>
+                <a href="b-arch.php" class="nav-link">Courses</a>
+                <a href="admissions.php" class="nav-link">Admissions</a>
+                <div class="nav-dropdown">
+                    <a href="facilities.php" class="nav-link nav-link-dropdown">Facilities <svg class="dropdown-icon"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></a>
+                    <div class="dropdown-menu">
+                        <a href="international-exposure.php" class="dropdown-item">International Exposure</a>
+                        <a href="leisure-lifestyle.php" class="dropdown-item">Leisure & Lifestyle at CAAD</a>
+                        <a href="campus.php" class="dropdown-item">Campus</a>
+                        <a href="lab-facilities.php" class="dropdown-item">Lab Facilities & Workshops</a>
+                        <a href="library.php" class="dropdown-item">Library</a>
+                        <a href="transport.php" class="dropdown-item">Transport</a>
+                        <a href="hostel.php" class="dropdown-item">Hostel</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="placement.php" class="nav-link nav-link-dropdown active">Placement <svg
+                            class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></a>
+                    <div class="dropdown-menu">
+                        <a href="job-placement.php" class="dropdown-item">Job Placement</a>
+                        <a href="internship-placement.php" class="dropdown-item">Internship Placement</a>
+                        <a href="higher-education.php" class="dropdown-item active">Higher Education</a>
+                        <a href="openings.php" class="dropdown-item">Openings</a>
+                    </div>
+                </div>
+                <a href="alumni.php" class="nav-link">Alumni</a>
+                <a href="events.php" class="nav-link">Events</a>
+                <a href="contact.php" class="nav-link">Contact</a>
+                <a href="admissions.php" class="nav-link">NATA</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="admissions.php#apply" class="btn btn-nav">Apply Now</a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span
+                        class="hamburger"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.php">Home</a>
+                <span>/</span>
+                <a href="placement.php">Placement</a>
+                <span>/</span>
+                <span>Higher Education</span>
+            </div>
+            <h1 class="page-title">Higher Education</h1>
+            <p class="page-subtitle">CAAD graduates at top global universities</p>
+        </div>
+    </section>
+
+    <!-- Split Hero -->
+    <section class="section">
+        <div class="container">
+            <div class="split-hero">
+                <div class="split-hero-content">
+                    <span class="overline">Global Pathways</span>
+                    <h2>What Makes CAAD Students the Choice of Top Institutions</h2>
+                    <p>CAAD graduates are accepted at prestigious universities worldwide including De Montfort
+                        University Leicester, Heriot Watt University, SKEMA Business School, and the University of
+                        Edinburgh among others.</p>
+                    <p>Our comprehensive curriculum, international studio exposure with SCI-Arc USA, and focus on
+                        cutting-edge design technology prepare students for advanced studies at the world's best
+                        institutions.</p>
+                </div>
+                <div class="split-hero-visual">
+                    <img src="assets/images/placements/higher-education/Slide1-1.jpg"
+                        alt="Higher Education Achievements">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths - Stagger Blocks -->
+    <section class="section" style="background: var(--color-dark-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Strengths</span>
+                <h2 class="section-title">Strengths of CAAD Students</h2>
+            </div>
+            <div class="stagger-blocks">
+                <div class="stagger-block">
+                    <div class="stagger-number"></div>
+                    <div class="stagger-content">
+                        <h3>Tutored by Experienced Faculty</h3>
+                        <p>Our students are mentored by experienced faculty members from the industry who bring
+                            real-world architectural knowledge and academic rigour, preparing them for the demands of
+                            postgraduate programs at global institutions.</p>
+                    </div>
+                </div>
+                <div class="stagger-block">
+                    <div class="stagger-number"></div>
+                    <div class="stagger-content">
+                        <h3>Undergone International Studios</h3>
+                        <p>Through MOU partnerships with Southern California Institute of Architecture (SCI-Arc),
+                            students gain international studio experience, making them familiar with global pedagogical
+                            standards and design methodologies.</p>
+                    </div>
+                </div>
+                <div class="stagger-block">
+                    <div class="stagger-number"></div>
+                    <div class="stagger-content">
+                        <h3>Proficient with Latest Tools in AI</h3>
+                        <p>CAAD students are trained in the latest tools in Artificial Intelligence, computational
+                            design, and digital fabrication, giving them a competitive edge in applications to advanced
+                            programs worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery - Higher Studies -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Achievements</span>
+                <h2 class="section-title">Our Graduates at Global Universities</h2>
+            </div>
+            <div class="poster-grid">
+                <div class="poster-card">
+                    <span class="poster-label">Higher Studies</span>
+                    <img src="assets/images/placements/higher-education/Slide1-1.jpg"
+                        alt="Higher Studies Batch Overview">
+                    <div class="poster-overlay">
+                        <h4>University Placements</h4>
+                        <p>CEPT • RMIT • Queensland</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">Higher Studies</span>
+                    <img src="assets/images/placements/higher-education/Slide2-1.jpg"
+                        alt="University Placements – UK Universities">
+                    <div class="poster-overlay">
+                        <h4>University Placements</h4>
+                        <p>De Montfort • Heriot Watt</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">Higher Studies</span>
+                    <img src="assets/images/placements/higher-education/Slide3.jpg"
+                        alt="University Placements – European Universities">
+                    <div class="poster-overlay">
+                        <h4>University Placements</h4>
+                        <p>Edinburgh • SKEMA</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">Higher Studies</span>
+                    <img src="assets/images/placements/higher-education/Slide4.jpg"
+                        alt="University Placements – Global Network">
+                    <div class="poster-overlay">
+                        <h4>University Placements</h4>
+                        <p>Global University Network</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">Higher Studies</span>
+                    <img src="assets/images/placements/higher-education/Slide5.jpg"
+                        alt="University Placements – International Programs">
+                    <div class="poster-overlay">
+                        <h4>University Placements</h4>
+                        <p>International Programs & Collaborations</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">Higher Studies</span>
+                    <img src="assets/images/placements/higher-education/Slide6.jpg"
+                        alt="University Placements – Graduate Success">
+                    <div class="poster-overlay">
+                        <h4>University Placements</h4>
+                        <p>Graduate Success Stories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accent Quote -->
+    <section class="section" style="background: var(--color-dark-secondary);">
+        <div class="container">
+            <div class="accent-quote">
+                <p>CAAD's unique combination of international exposure, industry-integrated curriculum, and cutting-edge
+                    technology training makes our graduates stand out in applications to the world's most prestigious
+                    architecture and design programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Aim for Global Excellence</h2>
+                <p class="cta-text">Join CAAD and pave your way to top international universities.</p>
+                <div class="cta-buttons">
+                    <a href="contact.php" class="btn btn-white">Contact Us</a>
+                    <a href="admissions.php" class="btn btn-outline-white">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.php" class="footer-logo">
+                        <img src="assets/images/caad_logo_footer.png" alt="CAAD Logo" class="footer-logo-img">
+                        <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
+                    </a>
+                    <p class="footer-description">Shaping the future of architecture and design education since 2014.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="courses.php">Programs</a></li>
+                        <li><a href="admissions.php">Admissions</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact</h4>
+                    <address>
+                        <p>CAAD City Campus, Parivakkam, Poonamallee Bypass. Next to CMRL Poonamallee Metro Depot, Chennai – 600 056</p>
+                        <p>+91 97105 54545 | admin@caad.ac.in</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chennai Academy of Architecture and Design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () { document.documentElement.setAttribute('data-theme', 'light'); })();
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) { themeToggle.addEventListener('click', () => { const currentTheme = document.documentElement.getAttribute('data-theme'); const newTheme = currentTheme === 'dark' ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', newTheme); localStorage.setItem('theme', newTheme); }); }
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); navToggle.classList.toggle('active'); });
+    </script>
+    <script>
+        window.addEventListener('load', () => { const loader = document.getElementById('archLoader'); if (loader) { setTimeout(() => { loader.classList.add('fade-out'); setTimeout(() => { loader.style.display = 'none'; }, 600); }, 1000); } });
+    </script>
+    <script src="lightbox.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CAAD Internship Placement - Students gain hands-on experience at top architecture firms in Chennai, Bangalore, Hyderabad and across India.">
+    <title>Internship Placement | CAAD Chennai</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Premium Architectural Loader -->
+    <div class="arch-loader-overlay" id="archLoader">
+        <div class="iso-city">
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+            <div class="iso-block">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side right"></div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+        </div>
+        <div class="loader-text-container">
+            <h2 class="loader-title">Building Dreams</h2>
+            <p class="loader-subtitle">Chennai Academy of Architecture & Design</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.php" class="nav-logo">
+                <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="logo-img">
+                <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="about.php" class="nav-link">About</a>
+                <a href="b-arch.php" class="nav-link">Courses</a>
+                <a href="admissions.php" class="nav-link">Admissions</a>
+                <div class="nav-dropdown">
+                    <a href="facilities.php" class="nav-link nav-link-dropdown">Facilities
+                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="international-exposure.php" class="dropdown-item">International Exposure</a>
+                        <a href="leisure-lifestyle.php" class="dropdown-item">Leisure & Lifestyle at CAAD</a>
+                        <a href="campus.php" class="dropdown-item">Campus</a>
+                        <a href="lab-facilities.php" class="dropdown-item">Lab Facilities & Workshops</a>
+                        <a href="library.php" class="dropdown-item">Library</a>
+                        <a href="transport.php" class="dropdown-item">Transport</a>
+                        <a href="hostel.php" class="dropdown-item">Hostel</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="placement.php" class="nav-link nav-link-dropdown active">Placement
+                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="job-placement.php" class="dropdown-item">Job Placement</a>
+                        <a href="internship-placement.php" class="dropdown-item active">Internship Placement</a>
+                        <a href="higher-education.php" class="dropdown-item">Higher Education</a>
+                        <a href="openings.php" class="dropdown-item">Openings</a>
+                    </div>
+                </div>
+                <a href="alumni.php" class="nav-link">Alumni</a>
+                <a href="events.php" class="nav-link">Events</a>
+                <a href="contact.php" class="nav-link">Contact</a>
+                <a href="admissions.php" class="nav-link">NATA</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="admissions.php#apply" class="btn btn-nav">Apply Now</a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span
+                        class="hamburger"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.php">Home</a>
+                <span>/</span>
+                <a href="placement.php">Placement</a>
+                <span>/</span>
+                <span>Internship Placement</span>
+            </div>
+            <h1 class="page-title">Internship Placement</h1>
+            <p class="page-subtitle">Hands-on professional training at leading architecture studios</p>
+        </div>
+    </section>
+
+    <!-- Split Hero -->
+    <section class="section">
+        <div class="container">
+            <div class="split-hero">
+                <div class="split-hero-content">
+                    <span class="overline">Professional Training</span>
+                    <h2>Real-World Experience During Your Studies</h2>
+                    <p>CAAD ensures every student gains practical experience through structured internship placements at
+                        renowned architecture firms and design studios. Students are placed at firms across Chennai,
+                        Bangalore, Hyderabad, and other major cities.</p>
+                    <p>Internship periods include dedicated training at firms like Archscape, Keystone Architects, 3Fold
+                        Design, Preethi Architects, Ostraca, and many more leading studios across India.</p>
+                </div>
+                <div class="split-hero-visual">
+                    <img src="assets/images/facility-learning-corridor.jpg" alt="CAAD Learning Environment">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Banner -->
+    <section class="section" style="background: var(--color-dark-secondary);">
+        <div class="container">
+            <div class="highlight-banner">
+                <div class="highlight-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                </div>
+                <div class="highlight-text">
+                    <h3>Industry-Integrated Curriculum</h3>
+                    <p>Structured internship periods are integrated into the academic calendar, ensuring students gain
+                        6+ months of real-world professional experience before graduation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poster Grid - Batch 2018-23 -->
+    <section class="section">
+        <div class="container">
+            <div class="batch-divider">
+                <span class="batch-year">Batch 2018–23</span>
+                <span class="batch-line"></span>
+                <span class="batch-count">4 Posters</span>
+            </div>
+            <div class="poster-grid">
+                <div class="poster-card">
+                    <span class="poster-label">2018–23</span>
+                    <img src="assets/images/placements/internship/B1823-A1-2.jpg"
+                        alt="Batch 2018-23 Internship Poster 1">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Archscape &bull; Keystone Architects</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2018–23</span>
+                    <img src="assets/images/placements/internship/B1823-A2-2.jpg"
+                        alt="Batch 2018-23 Internship Poster 2">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>3Fold Design &bull; Preethi Architects</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2018–23</span>
+                    <img src="assets/images/placements/internship/B1823-A3-2.jpg"
+                        alt="Batch 2018-23 Internship Poster 3">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Chennai &bull; Bangalore &bull; Hyderabad</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2018–23</span>
+                    <img src="assets/images/placements/internship/B1823-A4-2.jpg"
+                        alt="Batch 2018-23 Internship Poster 4">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Leading Studios Across India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poster Grid - Batch 2017-22 -->
+    <section class="section" style="background: var(--color-dark-secondary);">
+        <div class="container">
+            <div class="batch-divider">
+                <span class="batch-year">Batch 2017–22</span>
+                <span class="batch-line"></span>
+                <span class="batch-count">2 Posters</span>
+            </div>
+            <div class="poster-grid">
+                <div class="poster-card">
+                    <span class="poster-label">2017–22</span>
+                    <img src="assets/images/placements/internship/B1722-A1-1.jpg"
+                        alt="Batch 2017-22 Internship Poster 1">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Archscape &bull; Keystone Architects</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2017–22</span>
+                    <img src="assets/images/placements/internship/B1722-A2-1.jpg"
+                        alt="Batch 2017-22 Internship Poster 2">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Chennai &bull; Bangalore &bull; Hyderabad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poster Grid - Batch 2016-21 -->
+    <section class="section">
+        <div class="container">
+            <div class="batch-divider">
+                <span class="batch-year">Batch 2016–21</span>
+                <span class="batch-line"></span>
+                <span class="batch-count">6 Posters</span>
+            </div>
+            <div class="poster-grid">
+                <div class="poster-card">
+                    <span class="poster-label">2016–21</span>
+                    <img src="assets/images/placements/internship/B1621-A1-1.jpg"
+                        alt="Batch 2016-21 Internship Poster 1">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Archscape &bull; Keystone Architects</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2016–21</span>
+                    <img src="assets/images/placements/internship/B1621-A2-1.jpg"
+                        alt="Batch 2016-21 Internship Poster 2">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>3Fold Design &bull; Preethi Architects</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2016–21</span>
+                    <img src="assets/images/placements/internship/B1621-A3-1.jpg"
+                        alt="Batch 2016-21 Internship Poster 3">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Chennai &bull; Bangalore &bull; Hyderabad</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2016–21</span>
+                    <img src="assets/images/placements/internship/B1621-A4-1.jpg"
+                        alt="Batch 2016-21 Internship Poster 4">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Leading Studios Across India</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2016–21</span>
+                    <img src="assets/images/placements/internship/B1621-A5-1.jpg"
+                        alt="Batch 2016-21 Internship Poster 5">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Ostraca &bull; Design Collective</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2016–21</span>
+                    <img src="assets/images/placements/internship/B1621-A6-1.jpg"
+                        alt="Batch 2016-21 Internship Poster 6">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Top Firms &bull; Pan-India Placements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poster Grid - Batch 2015-20 -->
+    <section class="section" style="background: var(--color-dark-secondary);">
+        <div class="container">
+            <div class="batch-divider">
+                <span class="batch-year">Batch 2015–20</span>
+                <span class="batch-line"></span>
+                <span class="batch-count">8 Posters</span>
+            </div>
+            <div class="poster-grid">
+                <div class="poster-card">
+                    <span class="poster-label">2015–20</span>
+                    <img src="assets/images/placements/internship/B1520-A1-1.jpg"
+                        alt="Batch 2015-20 Internship Poster 1">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Archscape &bull; Keystone Architects</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2015–20</span>
+                    <img src="assets/images/placements/internship/B1520-A2-1.jpg"
+                        alt="Batch 2015-20 Internship Poster 2">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>3Fold Design &bull; Preethi Architects</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2015–20</span>
+                    <img src="assets/images/placements/internship/B1520-A3-1.jpg"
+                        alt="Batch 2015-20 Internship Poster 3">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Chennai &bull; Bangalore &bull; Hyderabad</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2015–20</span>
+                    <img src="assets/images/placements/internship/B1520-A4-1.jpg"
+                        alt="Batch 2015-20 Internship Poster 4">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Leading Studios Across India</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2015–20</span>
+                    <img src="assets/images/placements/internship/B1520-A5-1.jpg"
+                        alt="Batch 2015-20 Internship Poster 5">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Ostraca &bull; Design Collective</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2015–20</span>
+                    <img src="assets/images/placements/internship/B1520-A6-1.jpg"
+                        alt="Batch 2015-20 Internship Poster 6">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Top Firms &bull; Pan-India Placements</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2015–20</span>
+                    <img src="assets/images/placements/internship/B1520-A7-1.jpg"
+                        alt="Batch 2015-20 Internship Poster 7">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Architecture &bull; Interior Design Studios</p>
+                    </div>
+                </div>
+                <div class="poster-card">
+                    <span class="poster-label">2015–20</span>
+                    <img src="assets/images/placements/internship/B1520-A8-1.jpg"
+                        alt="Batch 2015-20 Internship Poster 8">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Industry Partners &bull; Nationwide Network</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poster Grid - Batch 2014-19 -->
+    <section class="section">
+        <div class="container">
+            <div class="batch-divider">
+                <span class="batch-year">Batch 2014–19</span>
+                <span class="batch-line"></span>
+                <span class="batch-count">1 Poster</span>
+            </div>
+            <div class="poster-grid">
+                <div class="poster-card">
+                    <span class="poster-label">2014–19</span>
+                    <img src="assets/images/placements/internship/B1419-A1-1.jpg"
+                        alt="Batch 2014-19 Internship Poster 1">
+                    <div class="poster-overlay">
+                        <h4>Internship Placements</h4>
+                        <p>Leading Studios Across India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Gain Real-World Experience</h2>
+                <p class="cta-text">Join CAAD and intern at India's best architecture firms.</p>
+                <div class="cta-buttons">
+                    <a href="contact.php" class="btn btn-white">Contact Us</a>
+                    <a href="admissions.php" class="btn btn-outline-white">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.php" class="footer-logo">
+                        <img src="assets/images/caad_logo_footer.png" alt="CAAD Logo" class="footer-logo-img">
+                        <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
+                    </a>
+                    <p class="footer-description">Shaping the future of architecture and design education since 2014.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="courses.php">Programs</a></li>
+                        <li><a href="admissions.php">Admissions</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact</h4>
+                    <address>
+                        <p>CAAD City Campus, Parivakkam, Poonamallee Bypass. Next to CMRL Poonamallee Metro Depot, Chennai – 600 056</p>
+                        <p>+91 97105 54545 | admin@caad.ac.in</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chennai Academy of Architecture and Design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () { document.documentElement.setAttribute('data-theme', 'light'); })();
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) { themeToggle.addEventListener('click', () => { const currentTheme = document.documentElement.getAttribute('data-theme'); const newTheme = currentTheme === 'dark' ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', newTheme); localStorage.setItem('theme', newTheme); }); }
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); navToggle.classList.toggle('active'); });
+    </script>
+    <script>
+        window.addEventListener('load', () => { const loader = document.getElementById('archLoader'); if (loader) { setTimeout(() => { loader.classList.add('fade-out'); setTimeout(() => { loader.style.display = 'none'; }, 600); }, 1000); } });
+    </script>
+    <script src="lightbox.js"></script>
+</body>
+
+</html>

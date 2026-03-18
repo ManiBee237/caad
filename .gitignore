@@ -1,0 +1,13 @@
+# Claude Code settings
+.claude/
+
+# Sensitive files
+mail-config.php
+test-mail.php
+
+# Log files
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store

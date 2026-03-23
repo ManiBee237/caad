@@ -17,81 +17,15 @@
 </head>
 
 <body>
-    <!-- Premium Architectural Loader -->
-    <div class="arch-loader-overlay" id="archLoader">
-        <div class="iso-city">
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
+    <?php include 'includes/loader.php'; ?>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
         </div>
         <div class="loader-text-container">
             <h2 class="loader-title">Building Dreams</h2>
@@ -99,65 +33,9 @@
         </div>
     </div>
 
+
     <!-- Navigation -->
-    <header class="navbar scrolled" id="navbar">
-        <div class="nav-container">
-            <a href="index.php" class="nav-logo">
-                <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="logo-img">
-                <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
-            </a>
-
-            <nav class="nav-menu" id="nav-menu">
-                <a href="about.php" class="nav-link">About</a>
-                <a href="b-arch.php" class="nav-link">Courses</a>
-                <a href="admissions.php" class="nav-link">Admissions</a>
-                <div class="nav-dropdown">
-                    <a href="facilities.php" class="nav-link nav-link-dropdown active">
-                        Facilities
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="international-exposure.php" class="dropdown-item">International Exposure</a>
-                        <a href="leisure-lifestyle.php" class="dropdown-item">Leisure & Lifestyle at CAAD</a>
-                        <a href="campus.php" class="dropdown-item active">Campus</a>
-                        <a href="lab-facilities.php" class="dropdown-item">Lab Facilities & Workshops</a>
-                        <a href="library.php" class="dropdown-item">Library</a>
-                        <a href="transport.php" class="dropdown-item">Transport</a>
-                        <a href="hostel.php" class="dropdown-item">Hostel</a>
-                    </div>
-                </div>
-                <div class="nav-dropdown">
-                    <a href="placement.php" class="nav-link nav-link-dropdown">
-                        Placement
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="job-placement.php" class="dropdown-item">Job Placement</a>
-                        <a href="internship-placement.php" class="dropdown-item">Internship Placement</a>
-                        <a href="higher-education.php" class="dropdown-item">Higher Education</a>
-                        <a href="openings.php" class="dropdown-item">Openings</a>
-                    </div>
-                </div>
-                <a href="alumni.php" class="nav-link">Alumni</a>
-                <a href="events.php" class="nav-link">Events</a>
-                <a href="contact.php" class="nav-link">Contact</a>
-                <a href="admissions.php" class="nav-link">NATA</a>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="admissions.php#apply" class="btn btn-nav">Apply Now</a>
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <?php $current_page = 'campus'; include 'includes/nav.php'; ?>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -185,7 +63,7 @@
                         teaching resources to achieve the set goals for any Institution.</p>
                 </div>
                 <div class="split-hero-visual">
-                    <img src="assets/images/new-building.jpg" alt="CAAD Main Building">
+                    <img src="assets/images/design-studio-02.jpg" alt="CAAD Design Studio">
                 </div>
             </div>
         </div>
@@ -204,7 +82,7 @@
                         evolve as balanced individuals with sound ethics and morals.</p>
                 </div>
                 <div class="split-hero-visual">
-                    <img src="assets/images/facility-learning-corridor.jpg" alt="Learning Corridor">
+                    <img src="assets/images/campus-corridor-01.jpg" alt="Learning Corridor">
                 </div>
             </div>
         </div>
@@ -220,7 +98,7 @@
 
             <div class="facility-gallery">
                 <div class="facility-gallery-item">
-                    <img src="assets/images/new-building.jpg" alt="CAAD Main Building">
+                    <img src="assets/images/campus-building-transport.jpg" alt="CAAD Main Building">
                     <div class="gallery-caption">
                         <h4>Main Building</h4>
                         <p>Architecture that inspires</p>
@@ -234,9 +112,9 @@
                     </div>
                 </div>
                 <div class="facility-gallery-item">
-                    <img src="assets/images/caad-campus-02.jpg" alt="Campus Exterior">
+                    <img src="assets/images/campus-corridor-02.jpg" alt="Campus Corridor">
                     <div class="gallery-caption">
-                        <h4>Campus Exterior</h4>
+                        <h4>Campus Corridor</h4>
                         <p>Modern design meets function</p>
                     </div>
                 </div>
@@ -248,14 +126,14 @@
                     </div>
                 </div>
                 <div class="facility-gallery-item">
-                    <img src="assets/images/caad-campus-05.jpg" alt="Campus Walkway">
+                    <img src="assets/images/caad-entrance-group.jpg" alt="Students at CAAD Entrance">
                     <div class="gallery-caption">
-                        <h4>Campus Walkway</h4>
-                        <p>Connecting studios &amp; labs</p>
+                        <h4>Student Community</h4>
+                        <p>Together at CAAD</p>
                     </div>
                 </div>
                 <div class="facility-gallery-item">
-                    <img src="assets/images/facility-learning-corridor.jpg" alt="Learning Corridor">
+                    <img src="assets/images/campus-corridor-01.jpg" alt="Learning Corridor">
                     <div class="gallery-caption">
                         <h4>Learning Corridor</h4>
                         <p>Exposure beyond classroom</p>
@@ -276,17 +154,17 @@
                     </div>
                 </div>
                 <div class="facility-gallery-item">
-                    <img src="assets/images/caad-campus-08.jpg" alt="Study Spaces">
+                    <img src="assets/images/design-studio-01.jpg" alt="Design Studio">
                     <div class="gallery-caption">
-                        <h4>Study Spaces</h4>
+                        <h4>Design Studio</h4>
                         <p>Where ideas take shape</p>
                     </div>
                 </div>
                 <div class="facility-gallery-item">
-                    <img src="assets/images/caad-campus-09.jpg" alt="Campus Interior">
+                    <img src="assets/images/model-exhibition-01.jpg" alt="Model Exhibition">
                     <div class="gallery-caption">
-                        <h4>Interior Design</h4>
-                        <p>Thoughtful campus interiors</p>
+                        <h4>Model Exhibition</h4>
+                        <p>Student work on display</p>
                     </div>
                 </div>
                 <div class="facility-gallery-item">
@@ -311,9 +189,9 @@
                     </div>
                 </div>
                 <div class="facility-gallery-item">
-                    <img src="assets/images/caad-campus-13.jpg" alt="Campus Grounds">
+                    <img src="assets/images/campus-building-transport.jpg" alt="Campus Building">
                     <div class="gallery-caption">
-                        <h4>Campus Grounds</h4>
+                        <h4>Campus Building</h4>
                         <p>Green &amp; serene environment</p>
                     </div>
                 </div>
@@ -339,7 +217,21 @@
                     </div>
                 </div>
                 <div class="facility-gallery-item">
-                    <img src="assets/images/new-building.jpg" alt="New City Campus">
+                    <img src="assets/images/students-with-models-01.jpg" alt="Students with Models">
+                    <div class="gallery-caption">
+                        <h4>Students with Models</h4>
+                        <p>Architecture in the making</p>
+                    </div>
+                </div>
+                <div class="facility-gallery-item">
+                    <img src="assets/images/students-with-models-02.jpg" alt="Students Carrying Models">
+                    <div class="gallery-caption">
+                        <h4>Model Submissions</h4>
+                        <p>Hands-on architectural learning</p>
+                    </div>
+                </div>
+                <div class="facility-gallery-item">
+                    <img src="assets/images/caad-campus-16.jpg" alt="New City Campus">
                     <div class="gallery-caption">
                         <h4>New City Campus</h4>
                         <p>Near Poonamallee Metro</p>
@@ -385,39 +277,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.php" class="footer-logo">
-                        <img src="assets/images/caad_logo_footer.png" alt="CAAD Logo" class="footer-logo-img">
-                        <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
-                    </a>
-                    <p class="footer-description">Shaping the future of architecture and design education since 2014.
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="courses.php">Programs</a></li>
-                        <li><a href="admissions.php">Admissions</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 class="footer-title">Contact</h4>
-                    <address>
-                        <p>CAAD City Campus, Parivakkam, Poonamallee Bypass. Next to CMRL Poonamallee Metro Depot, Chennai – 600 056</p>
-                        <p>+91 97105 54545 | admin@caad.ac.in</p>
-                    </address>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Chennai Academy of Architecture and Design.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'includes/footer.php'; ?>
 
     <script>
         (function () {

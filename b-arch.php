@@ -17,146 +17,14 @@
 </head>
 
 <body>
-    <!-- Premium Architectural Loader -->
-    <div class="arch-loader-overlay" id="archLoader">
-        <div class="iso-city">
-            <!-- 9 Blocks for a 3x3 Grid -->
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-        </div>
-        <div class="loader-text-container">
-            <h2 class="loader-title">Building Dreams</h2>
+    <?php include 'includes/loader.php'; ?>
+            <h2 class="loader-title">B.Arch. (5 Years)</h2>
             <p class="loader-subtitle">Chennai Academy of Architecture & Design</p>
         </div>
     </div>
 
     <!-- Navigation -->
-    <header class="navbar scrolled" id="navbar">
-        <div class="nav-container">
-            <a href="index.php" class="nav-logo">
-                <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="logo-img">
-                <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
-            </a>
-
-            <nav class="nav-menu" id="nav-menu">
-                <a href="about.php" class="nav-link">About</a>
-                <a href="b-arch.php" class="nav-link">Courses</a>
-                <a href="admissions.php" class="nav-link">Admissions</a>
-                <div class="nav-dropdown">
-                    <a href="facilities.php" class="nav-link nav-link-dropdown">
-                        Facilities
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="international-exposure.php" class="dropdown-item">International Exposure</a>
-                        <a href="leisure-lifestyle.php" class="dropdown-item">Leisure & Lifestyle at CAAD</a>
-                        <a href="campus.php" class="dropdown-item">Campus</a>
-                        <a href="lab-facilities.php" class="dropdown-item">Lab Facilities & Workshops</a>
-                        <a href="library.php" class="dropdown-item">Library</a>
-                        <a href="transport.php" class="dropdown-item">Transport</a>
-                        <a href="hostel.php" class="dropdown-item">Hostel</a>
-                    </div>
-                </div>
-                <div class="nav-dropdown">
-                    <a href="placement.php" class="nav-link nav-link-dropdown">
-                        Placement
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="job-placement.php" class="dropdown-item">Job Placement</a>
-                        <a href="internship-placement.php" class="dropdown-item">Internship Placement</a>
-                        <a href="higher-education.php" class="dropdown-item">Higher Education</a>
-                        <a href="openings.php" class="dropdown-item">Openings</a>
-                    </div>
-                </div>
-                <a href="alumni.php" class="nav-link">Alumni</a>
-                <a href="events.php" class="nav-link">Events</a>
-                <a href="contact.php" class="nav-link">Contact</a>
-                <a href="admissions.php" class="nav-link">NATA</a>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="admissions.php#apply" class="btn btn-nav">Apply Now</a>
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <?php $current_page = 'courses'; include 'includes/nav.php'; ?>
 
     <!-- Page Header -->
     <section class="page-header page-header-program">
@@ -169,9 +37,15 @@
                 <span>B.Arch</span>
             </div>
             <div class="program-header">
-                <div class="program-badge">COA Approved<br>Anna University Affiliated</div>
-                <h1 class="page-title">B.Arch Architecture</h1>
-                <p class="page-subtitle">5-Year Professional Degree Program</p>
+                <div class="program-badge">Approved by Council of Architecture, New Delhi.<br> Affiliated to Anna University, Chennai.
+             </div>
+             <h1><span class="info-label highlight-label">Counselling Code - 1152</span></h1>
+                <h1 class="page-title">B.Arch., (Bachelor of Architecture)</h1>
+              
+                <p class="page-subtitle">5-Year Professional Degree Program</p><p><a href="admissions.php#apply" class="btn btn-primary"
+                            style="width: 100%; margin-top: 1.5rem;">
+                            Apply Now
+                        </a></p>
             </div>
         </div>
     </section>
@@ -286,6 +160,22 @@
         </div>
     </section>
 
+    <!-- Student Work -->
+    <section class="section">
+        <div class="container">
+            <div class="split-hero">
+                <div class="split-hero-content">
+                    <span class="overline">Student Work</span>
+                    <h2>Learning by Making</h2>
+                    <p>Architecture is best learned through hands-on practice. Our students create detailed architectural models, engage in design studios, and develop spatial thinking through practical projects from their very first year.</p>
+                </div>
+                <div class="split-hero-visual">
+                    <img src="assets/images/students-with-models-03.jpg" alt="Students with Architectural Models">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Curriculum -->
     <section class="section">
         <div class="container">
@@ -338,39 +228,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.php" class="footer-logo">
-                        <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="logo-img">
-                        <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
-                    </a>
-                    <p class="footer-description">Shaping the future of architecture and design education since 2014.
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="courses.php">Programs</a></li>
-                        <li><a href="admissions.php">Admissions</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 class="footer-title">Contact</h4>
-                    <address>
-                        <p>CAAD City Campus, Parivakkam, Poonamallee Bypass. Next to CMRL Poonamallee Metro Depot, Chennai – 600 056</p>
-                        <p>+91 97105 54545 | admin@caad.ac.in</p>
-                    </address>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Chennai Academy of Architecture and Design.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'includes/footer.php'; ?>
 
     <script>
         // Theme Toggle System

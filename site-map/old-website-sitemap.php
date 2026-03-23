@@ -176,87 +176,22 @@
 </head>
 
 <body>
-    <!-- Premium Architectural Loader -->
-    <div class="arch-loader-overlay" id="archLoader">
-        <div class="iso-city">
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
+    <?php include 'includes/loader.php'; ?>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
         </div>
         <div class="loader-text-container">
             <h2 class="loader-title">Building Dreams</h2>
             <p class="loader-subtitle">Chennai Academy of Architecture & Design</p>
         </div>
     </div>
+
 
     <!-- Navigation -->
     <header class="navbar scrolled" id="navbar">

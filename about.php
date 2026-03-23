@@ -17,82 +17,15 @@
 </head>
 
 <body>
-    <!-- Premium Architectural Loader -->
-    <div class="arch-loader-overlay" id="archLoader">
-        <div class="iso-city">
-            <!-- 9 Blocks for a 3x3 Grid -->
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
+    <?php include 'includes/loader.php'; ?>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
+            <div class="iso-block"><div class="side front"></div><div class="side back"></div><div class="side right"></div><div class="side left"></div><div class="side top"></div><div class="side bottom"></div></div>
         </div>
         <div class="loader-text-container">
             <h2 class="loader-title">Building Dreams</h2>
@@ -100,64 +33,7 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-
-    <header class="navbar scrolled" id="navbar">
-        <div class="nav-container">
-            <a href="index.php" class="nav-logo">
-                <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="logo-img">
-                <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
-            </a>
-
-            <nav class="nav-menu" id="nav-menu">
-                <a href="about.php" class="nav-link active">About</a>
-                <a href="b-arch.php" class="nav-link">Courses</a>
-                <a href="admissions.php" class="nav-link">Admissions</a>
-                <div class="nav-dropdown">
-                    <a href="facilities.php" class="nav-link nav-link-dropdown">
-                        Facilities
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="international-exposure.php" class="dropdown-item">International Exposure</a>
-                        <a href="leisure-lifestyle.php" class="dropdown-item">Leisure & Lifestyle at CAAD</a>
-                        <a href="campus.php" class="dropdown-item">Campus</a>
-                        <a href="lab-facilities.php" class="dropdown-item">Lab Facilities & Workshops</a>
-                        <a href="library.php" class="dropdown-item">Library</a>
-                        <a href="transport.php" class="dropdown-item">Transport</a>
-                        <a href="hostel.php" class="dropdown-item">Hostel</a>
-                    </div>
-                </div>
-                <div class="nav-dropdown">
-                    <a href="placement.php" class="nav-link nav-link-dropdown">
-                        Placement
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="job-placement.php" class="dropdown-item">Job Placement</a>
-                        <a href="internship-placement.php" class="dropdown-item">Internship Placement</a>
-                        <a href="higher-education.php" class="dropdown-item">Higher Education</a>
-                        <a href="openings.php" class="dropdown-item">Openings</a>
-                    </div>
-                </div>
-                <a href="alumni.php" class="nav-link">Alumni</a>
-                <a href="events.php" class="nav-link">Events</a>
-                <a href="contact.php" class="nav-link">Contact</a>
-                <a href="admissions.php" class="nav-link">NATA</a>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="admissions.php#apply" class="btn btn-nav">Apply Now</a>
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <?php $current_page = 'about'; include 'includes/nav.php'; ?>
 
     <!-- About Page Banner -->
     <section class="about-page-banner">
@@ -193,13 +69,18 @@
                 <div class="story-left">
                     <h2 class="story-title">A Legacy of Excellence<br>in Architecture and Design Education</h2>
                     <div class="story-rule"></div>
-                    <p class="about-text">At CAAD – Chennai Academy of Architecture and Design, students learn to shape the built environment through a powerful blend of design studios, industry engagement, global exposure, and advanced digital technologies.
+                    <p class="about-text">CAAD – Chennai Academy of Architecture and Design is a premier standalone institution dedicated to architecture and design education. Established in 2014, CAAD has rapidly grown into one of the most respected institutions offering the Bachelor of Architecture (B.Arch.) programme.
 </p>
-                    <p class="about-text">A standalone campus dedicated exclusively to Architecture and Design,
-                        offering workshop-based experiential learning that nurtures independent thinkers and
-                        design problem-solvers.</p>
-                    <p class="about-text">Our programs foster creativity, technical mastery, and a deep
-                        understanding of human needs — creating graduates who shape the built environment.</p>
+ <p class="about-text">
+CAAD is affiliated to Anna University, Chennai and approved by the Council of Architecture (CoA), New Delhi, ensuring that the academic framework meets the highest national standards for architectural education.
+</p>
+ <p class="about-text">CAAD is known for its academic rigor, advanced infrastructure, and a team of experienced and committed faculty members who mentor students through a rigorous and inspiring architectural learning journey.
+</p>
+ <p class="about-text">The institution fosters design thinking, critical inquiry, and contextual understanding of the built environment, enabling students to evolve into thoughtful architects capable of addressing contemporary challenges.
+</p>
+ <p class="about-text">Students of CAAD consistently secure University ranks, and the institution has built a strong reputation for producing graduates who are professionally competent and globally practice-ready.
+</p>
+                
                     <div class="story-pills">
                         <span class="story-pill">COA Approved</span>
                         <span class="story-pill">Anna University</span>
@@ -289,38 +170,42 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Leadership</span>
-                <h2 class="section-title">Meet Our Leaders</h2>
-                <p class="section-subtitle">Dedicated educators shaping the next generation of architects and designers
-                </p>
+                <h2 class="section-title">Meet Our Director</h2>
+                <p class="section-subtitle">Dedicated educator shaping the next generation of architects and designers</p>
             </div>
 
-            <div class="leadership-grid">
-                <div class="leader-card">
-                    <div class="leader-avatar">
-                        <img src="assets/images/chairman_new.jpg" alt="Chairman">
-                    </div>
-                    <h3>Prof. Dr. V. R. Rajendran</h3>
-                    <p class="leader-title">Chairman</p>
-                    <p class="leader-bio">Visionary leader who founded CAAD with the mission to create a world-class
-                        architecture and design academy in South India.</p>
+            <div class="about-director-layout">
+                <!-- Image Left -->
+                <div class="about-director-img">
+                    <img src="assets/images/director_new.jpg" alt="Prof. Vinodh Vijayakumar">
                 </div>
-                <div class="leader-card">
-                    <div class="leader-avatar">
-                        <img src="assets/images/trustee_new.jpg" alt="Managing Trustee">
+
+                <!-- Content Right -->
+                <div class="about-director-content">
+                    <p class="about-director-label">Director</p>
+                    <h3 class="about-director-name">Prof. Vinodh Vijayakumar</h3>
+                    <p class="about-director-credentials">M.Arch, Ph.D</p>
+
+                    <blockquote class="about-director-quote">
+                        "At CAAD, we believe architecture is not just about buildings — it is about shaping the human experience. Our mission is to cultivate designers who think critically, create boldly, and lead with purpose."
+                    </blockquote>
+
+                    <p class="about-director-bio">Prof. Vinodh Vijayakumar brings over two decades of rich experience in architecture education and practice. As Director of CAAD, he leads the academic vision of the institution — fostering a culture of creative rigour, global exposure, and professional excellence. Under his stewardship, CAAD has developed strong international collaborations and produced alumni who are leading design firms across India and abroad.</p>
+
+                    <div class="about-director-stats">
+                        <div class="about-director-stat">
+                            <span class="stat-num">20+</span>
+                            <span class="stat-label">Years in Architecture Education</span>
+                        </div>
+                        <div class="about-director-stat">
+                            <span class="stat-num">5+</span>
+                            <span class="stat-label">International Collaborations</span>
+                        </div>
+                        <div class="about-director-stat">
+                            <span class="stat-num">1000+</span>
+                            <span class="stat-label">Students Mentored</span>
+                        </div>
                     </div>
-                    <h3>Smt. V. R. Roopa Rajendran</h3>
-                    <p class="leader-title">Managing Trustee</p>
-                    <p class="leader-bio">Driving the administrative excellence and student welfare initiatives at CAAD.
-                    </p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-avatar">
-                        <img src="assets/images/director_new.jpg" alt="Director">
-                    </div>
-                    <h3>Prof. Vinodh Vijayakumar</h3>
-                    <p class="leader-title">Director</p>
-                    <p class="leader-bio">Leading the academic vision and ensuring excellence in design education and
-                        industry partnerships.</p>
                 </div>
             </div>
         </div>
@@ -564,7 +449,7 @@
                         </article>
                         <article class="award-card">
                             <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
-                                <img src="assets/images/caad-campus-05.jpg" alt="Anna University Toppers 2020">
+                                <img src="assets/images/caad-entrance-group.jpg" alt="Anna University Toppers 2020">
                                 <div class="image-overlay"><span>Click to view</span></div>
                             </div>
                             <div class="award-content">
@@ -592,7 +477,7 @@
                     <div class="awards-grid">
                         <article class="award-card">
                             <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
-                                <img src="assets/images/caad-campus-08.jpg" alt="GATE 2021 Achievers">
+                                <img src="assets/images/design-studio-03.jpg" alt="GATE 2021 Achievers">
                                 <div class="image-overlay"><span>Click to view</span></div>
                             </div>
                             <div class="award-content">
@@ -614,7 +499,7 @@
                         </article>
                         <article class="award-card">
                             <div class="award-image" onclick="openLightbox(this.querySelector('img').src)">
-                                <img src="assets/images/caad-campus-09.jpg" alt="Anna University Distinction 2021">
+                                <img src="assets/images/design-studio-02.jpg" alt="Anna University Distinction 2021">
                                 <div class="image-overlay"><span>Click to view</span></div>
                             </div>
                             <div class="award-content">
@@ -806,52 +691,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.php" class="footer-logo">
-                        <img src="assets/images/caad_logo_footer.png" alt="CAAD Logo" class="footer-logo-img">
-                        <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
-                    </a>
-                    <p class="footer-description">Shaping the future of architecture and design education since 2014.
-                    </p>
-                </div>
-
-                <div class="footer-links">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="courses.php">Programs</a></li>
-                        <li><a href="admissions.php">Admissions</a></li>
-                        <li><a href="facilities.php">Facilities</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4 class="footer-title">Programs</h4>
-                    <ul>
-                        <li><a href="b-arch.php">B.Arch Architecture</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-contact">
-                    <h4 class="footer-title">Contact</h4>
-                    <address>
-                        <p>CAAD City Campus, Parivakkam, Poonamallee Bypass. Next to CMRL Poonamallee Metro Depot, Chennai – 600 056</p>
-                        <p>+91 97105 54545</p>
-                        <p>admin@caad.ac.in</p>
-                    </address>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Chennai Academy of Architecture and Design.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'includes/footer.php'; ?>
 
     <script>
 

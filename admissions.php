@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/recaptcha-config.php';
+
 $form_submitted = false;
 $form_error = false;
 
@@ -9,8 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $program = htmlspecialchars(trim($_POST['program'] ?? ''));
     $qualification = htmlspecialchars(trim($_POST['qualification'] ?? ''));
     $message = htmlspecialchars(trim($_POST['message'] ?? ''));
+    $recaptcha_ok = verifyRecaptcha($_POST['g-recaptcha-response'] ?? '');
 
-    if ($name && $email && $phone && $program) {
+    if ($name && $email && $phone && $program && $recaptcha_ok) {
         // Save submission to log file
         $log_entry = date('Y-m-d H:i:s') . " | Name: $name | Email: $email | Phone: $phone | Program: $program | Qualification: $qualification | Message: $message\n";
         file_put_contents(__DIR__ . '/admissions_submissions.log', $log_entry, FILE_APPEND | LOCK_EX);
@@ -34,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Admissions at CAAD Chennai - Apply for B.Arch program. Anna University Counselling Code 1152. Admissions open for 2025-26.">
+        content="Admissions at CAAD Chennai - Apply for B.Arch program. Anna University Counselling Code 1152. Admissions open for 2026-2027.">
     <title>Admissions | CAAD Chennai</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,149 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
-    <!-- Premium Architectural Loader -->
-    <div class="arch-loader-overlay" id="archLoader">
-        <div class="iso-city">
-            <!-- 9 Blocks for a 3x3 Grid -->
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-            <div class="iso-block">
-                <div class="side front"></div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
-            </div>
-        </div>
-        <div class="loader-text-container">
-            <h2 class="loader-title">Building Dreams</h2>
-            <p class="loader-subtitle">Chennai Academy of Architecture & Design</p>
-        </div>
-    </div>
+    <?php include 'includes/loader.php'; ?>
 
-    <!-- Navigation -->
-    <header class="navbar scrolled" id="navbar">
-        <div class="nav-container">
-            <a href="index.php" class="nav-logo">
-                <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="logo-img">
-                <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
-            </a>
-
-            <nav class="nav-menu" id="nav-menu">
-                <a href="about.php" class="nav-link">About</a>
-                <a href="b-arch.php" class="nav-link">Courses</a>
-                <a href="admissions.php" class="nav-link active">Admissions</a>
-                <div class="nav-dropdown">
-                    <a href="facilities.php" class="nav-link nav-link-dropdown">
-                        Facilities
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="international-exposure.php" class="dropdown-item">International Exposure</a>
-                        <a href="leisure-lifestyle.php" class="dropdown-item">Leisure & Lifestyle at CAAD</a>
-                        <a href="campus.php" class="dropdown-item">Campus</a>
-                        <a href="lab-facilities.php" class="dropdown-item">Lab Facilities & Workshops</a>
-                        <a href="library.php" class="dropdown-item">Library</a>
-                        <a href="transport.php" class="dropdown-item">Transport</a>
-                        <a href="hostel.php" class="dropdown-item">Hostel</a>
-                    </div>
-                </div>
-                <div class="nav-dropdown">
-                    <a href="placement.php" class="nav-link nav-link-dropdown">
-                        Placement
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="job-placement.php" class="dropdown-item">Job Placement</a>
-                        <a href="internship-placement.php" class="dropdown-item">Internship Placement</a>
-                        <a href="higher-education.php" class="dropdown-item">Higher Education</a>
-                        <a href="openings.php" class="dropdown-item">Openings</a>
-                    </div>
-                </div>
-                <a href="alumni.php" class="nav-link">Alumni</a>
-                <a href="events.php" class="nav-link">Events</a>
-                <a href="contact.php" class="nav-link">Contact</a>
-                <a href="admissions.php" class="nav-link">NATA</a>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="admissions.php#apply" class="btn btn-nav">Apply Now</a>
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <?php $current_page = 'admissions'; include 'includes/nav.php'; ?>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -195,8 +62,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <span>/</span>
                 <span>Admissions</span>
             </div>
-            <h1 class="page-title">Admissions 2025-26</h1>
+            <h1 class="page-title">Admissions 2026-2027</h1>
             <p class="page-subtitle">Begin your journey in architecture and design</p>
+        </div>
+    </section>
+
+        <!-- Contact Info -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-banner">
+                <h3>Need Help with Admissions?</h3>
+                <p>Call us: <strong>+91 97105 54545</strong> | <strong>+91 97109 30025</strong></p>
+                <p>Email: <strong>admin@caad.ac.in</strong></p>
+            </div>
         </div>
     </section>
 
@@ -257,6 +135,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 placeholder="Any questions or additional information..."></textarea>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="<?= RECAPTCHA_SITE_KEY ?>"></div>
+                        <p class="recaptcha-required-msg" style="display:none; color:#c00; font-size:0.85rem; margin-top:0.4rem;">Please complete the reCAPTCHA to continue.</p>
+                    </div>
                     <button type="submit" class="btn btn-primary">
                         Submit Enquiry
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -278,129 +160,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <span class="badge-code">Counselling Code: 1152</span>
                 </div>
                 <h2>Admissions Are Now Open</h2>
-                <p>Apply for B.Arch program for the academic year 2025-26</p>
+                <p>Apply for B.Arch program for the academic year 2026-2027</p>
             </div>
         </div>
     </section>
 
     <!-- Programs Comparison -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Programs</span>
-                <h2 class="section-title">Choose Your Program</h2>
-            </div>
 
-            <div class="comparison-grid">
-                <div class="comparison-card">
-                    <h3>B.Arch Architecture</h3>
-                    <div class="comparison-details">
-                        <div class="comparison-row">
-                            <span class="label">Duration</span>
-                            <span class="value">5 Years</span>
-                        </div>
-                        <div class="comparison-row">
-                            <span class="label">Eligibility</span>
-                            <span class="value">12th with Maths</span>
-                        </div>
-                        <div class="comparison-row">
-                            <span class="label">Entrance</span>
-                            <span class="value">NATA / JEE Paper 2</span>
-                        </div>
-                        <div class="comparison-row">
-                            <span class="label">Affiliation</span>
-                            <span class="value">Anna University</span>
-                        </div>
-                        <div class="comparison-row">
-                            <span class="label">Approval</span>
-                            <span class="value">COA Approved</span>
-                        </div>
-                    </div>
-                    <a href="b-arch.php" class="btn btn-outline-primary" style="width: 100%;">Learn More</a>
-                </div>
 
-            </div>
-        </div>
-    </section>
 
-    <!-- How to Apply -->
-    <section class="section" style="background: var(--color-dark-secondary);">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Process</span>
-                <h2 class="section-title">How to Apply</h2>
-            </div>
 
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h4>Check Eligibility</h4>
-                    <p>Verify you meet the eligibility criteria for your chosen program</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h4>Prepare Documents</h4>
-                    <p>10th & 12th marksheets, NATA/JEE score (for B.Arch), photos, ID proof</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h4>Submit Enquiry</h4>
-                    <p>Fill the enquiry form below or contact us directly</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h4>Counselling</h4>
-                    <p>For B.Arch: Use counselling code 1152 in Anna University counselling</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Info -->
-    <section class="section">
-        <div class="container">
-            <div class="contact-banner">
-                <h3>Need Help with Admissions?</h3>
-                <p>Call us: <strong>+91 97105 54545</strong> | <strong>+91 97109 30025</strong></p>
-                <p>Email: <strong>admin@caad.ac.in</strong></p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.php" class="footer-logo">
-                        <img src="assets/images/caad_logo_big.jpg" alt="CAAD Logo" class="logo-img">
-                        <span class="logo-tagline">Chennai Academy of Architecture & Design</span>
-                    </a>
-                    <p class="footer-description">Shaping the future of architecture and design education since 2014.
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="courses.php">Programs</a></li>
-                        <li><a href="admissions.php">Admissions</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 class="footer-title">Contact</h4>
-                    <address>
-                        <p>CAAD City Campus, Parivakkam, Poonamallee Bypass. Next to CMRL Poonamallee Metro Depot, Chennai – 600 056</p>
-                        <p>+91 97105 54545 | admin@caad.ac.in</p>
-                    </address>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Chennai Academy of Architecture and Design.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'includes/footer.php'; ?>
 
     <script>
         // Theme Toggle System

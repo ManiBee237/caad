@@ -4,7 +4,6 @@
 # Sensitive files
 mail-config.php
 test-mail.php
-recaptcha-config.php
 
 # Log files
 *.log

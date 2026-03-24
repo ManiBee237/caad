@@ -76,9 +76,9 @@
                 <span class="section-label">Fleet</span>
                 <h2 class="section-title">Our Transport Fleet</h2>
             </div>
-            <div style="border-radius:16px; overflow:hidden; max-height:480px;">
+            <div style="border-radius:16px; overflow:hidden; height:480px;">
                 <img src="assets/images/campus-building-transport.jpg" alt="CAAD Bus Fleet"
-                    style="width:100%; height:100%; object-fit:cover; display:block;">
+                    style="width:100%; height:100%; object-fit:cover; object-position:center bottom; display:block;">
             </div>
         </div>
     </section>

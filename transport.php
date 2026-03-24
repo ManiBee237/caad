@@ -63,70 +63,22 @@
                         to engage in productive activities as soon as they reach home.</p>
                 </div>
                 <div class="split-hero-visual">
-                    <img src="assets/images/br1.jpg" alt="CAAD Transport Bus">
+                    <img src="assets/images/campus-building-transport.jpg" alt="CAAD Transport Bus">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Transport Gallery -->
+    <!-- Transport Fleet Banner -->
     <section class="section" style="background: var(--color-dark-secondary);">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Fleet</span>
                 <h2 class="section-title">Our Transport Fleet</h2>
             </div>
-
-            <div class="facility-gallery">
-                <div class="facility-gallery-item">
-                    <img src="assets/images/br1.jpg" alt="Student Transport">
-                    <div class="gallery-caption">
-                        <h4>Student Transport</h4>
-                        <p>Safe &amp; reliable commute</p>
-                    </div>
-                </div>
-                <div class="facility-gallery-item">
-                    <img src="assets/images/br2.jpg" alt="Bus Service">
-                    <div class="gallery-caption">
-                        <h4>City Routes</h4>
-                        <p>Covering all major areas</p>
-                    </div>
-                </div>
-                <div class="facility-gallery-item">
-                    <img src="assets/images/br3.jpg" alt="Transport Bus">
-                    <div class="gallery-caption">
-                        <h4>Fleet Service</h4>
-                        <p>On-time academic schedule</p>
-                    </div>
-                </div>
-                <div class="facility-gallery-item">
-                    <img src="assets/images/br4.jpg" alt="Bus Fleet">
-                    <div class="gallery-caption">
-                        <h4>Modern Buses</h4>
-                        <p>Comfort</p>
-                    </div>
-                </div>
-                <div class="facility-gallery-item">
-                    <img src="assets/images/br5.jpg" alt="Campus Transport">
-                    <div class="gallery-caption">
-                        <h4>Campus Transport</h4>
-                        <p>Daily student commute</p>
-                    </div>
-                </div>
-                <div class="facility-gallery-item">
-                    <img src="assets/images/br6.jpg" alt="Bus Service">
-                    <div class="gallery-caption">
-                        <h4>Bus Service</h4>
-                        <p>Peaceful rest during commute</p>
-                    </div>
-                </div>
-                <div class="facility-gallery-item">
-                    <img src="assets/images/campus-building-transport.jpg" alt="Campus with Buses">
-                    <div class="gallery-caption">
-                        <h4>Campus Arrival</h4>
-                        <p>Students arriving at CAAD</p>
-                    </div>
-                </div>
+            <div style="border-radius:16px; overflow:hidden; max-height:480px;">
+                <img src="assets/images/campus-building-transport.jpg" alt="CAAD Bus Fleet"
+                    style="width:100%; height:100%; object-fit:cover; display:block;">
             </div>
         </div>
     </section>

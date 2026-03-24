@@ -94,21 +94,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enquiry_form'])) {
                         </div>
                     </div>
                     <div class="alumni-carousel-slide">
-                        <img src="assets/images/caad-campus-02.jpg" alt="CAAD Campus View">
+                        <img src="assets/images/caad-campus-04.jpg" alt="CAAD Campus View">
                         <div class="alumni-carousel-caption">
                             <h4>Green Campus</h4>
                             <p>A sustainable environment that reflects our values</p>
                         </div>
                     </div>
                     <div class="alumni-carousel-slide">
-                        <img src="assets/images/new-building.jpg" alt="CAAD Main Building">
+                        <img src="assets/images/campus-building-transport.jpg" alt="CAAD Main Building">
                         <div class="alumni-carousel-caption">
                             <h4>Architectural Excellence</h4>
                             <p>Our building itself is a lesson in design</p>
                         </div>
                     </div>
                     <div class="alumni-carousel-slide">
-                        <img src="assets/images/caad-campus-05.jpg" alt="CAAD Events">
+                        <img src="assets/images/caad-campus-10.jpg" alt="CAAD Events">
                         <div class="alumni-carousel-caption">
                             <h4>Events &amp; Exhibitions</h4>
                             <p>Showcasing student talent and innovation</p>

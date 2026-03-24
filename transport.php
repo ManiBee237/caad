@@ -79,20 +79,6 @@
 
             <div class="facility-gallery">
                 <div class="facility-gallery-item">
-                    <img src="assets/images/facilities/transport/transport-01.jpeg" alt="AC Bus Fleet">
-                    <div class="gallery-caption">
-                        <h4>AC Fleet</h4>
-                        <p>Comfortable city-wide service</p>
-                    </div>
-                </div>
-                <div class="facility-gallery-item">
-                    <img src="assets/images/facilities/transport/transport-02.jpeg" alt="CAAD Bus">
-                    <div class="gallery-caption">
-                        <h4>CAAD Bus</h4>
-                        <p>Well-maintained vehicles</p>
-                    </div>
-                </div>
-                <div class="facility-gallery-item">
                     <img src="assets/images/br1.jpg" alt="Student Transport">
                     <div class="gallery-caption">
                         <h4>Student Transport</h4>

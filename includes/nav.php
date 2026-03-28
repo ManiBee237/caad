@@ -48,7 +48,7 @@ $nav_class = (!isset($nav_scrolled) || $nav_scrolled) ? 'navbar scrolled' : 'nav
             <a href="alumni.php" class="nav-link <?= ($current_page ?? '') === 'alumni' ? 'active' : '' ?>">Alumni</a>
             <a href="events.php" class="nav-link <?= ($current_page ?? '') === 'events' ? 'active' : '' ?>">Events</a>
             <a href="contact.php" class="nav-link <?= ($current_page ?? '') === 'contact' ? 'active' : '' ?>">Contact</a>
-            <a href="admissions.php" class="nav-link">NATA</a>
+            <a href="nata-2026.php" class="nav-link <?= ($current_page ?? '') === 'nata' ? 'active' : '' ?>">NATA 2026</a>
         </nav>
 
         <div class="nav-actions">

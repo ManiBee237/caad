@@ -800,57 +800,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enquiry_form'])) {
             </div>
 
             <div class="video-grid">
-                <!-- Main Featured Video -->
-                <div class="video-card video-featured">
+                <!-- Card 1 -->
+                <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/3cu12Iiwz-c" title="CAAD Introduction"
+                        <iframe src="https://www.youtube.com/embed/1Pyj6f9wUhk" title="Architectural Aspirations" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Architectural Aspirations</h3>
+                        <p class="video-description">A journey from CAAD to Professional Excellence — Discover how our graduates are shaping the world of architecture.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ZKGkq7HGss4" title="Empowering Through Workshops"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
                     </div>
                     <div class="video-info">
-                        <h3 class="video-title">Welcome to CAAD</h3>
-                        <p class="video-description">Discover our exclusive facilities, international study
-                            opportunities, hands-on workshops, and vibrant student life.</p>
+                        <h3 class="video-title">Empowering Through Workshops</h3>
+                        <p class="video-description">Certified Courses & Workshops — A CAAD alumni's perspective on how workshops shaped their career.</p>
                     </div>
                 </div>
 
-                <!-- Secondary Videos -->
+                <!-- Card 3 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/v_9PL79ClCY" title="CAAD Facilities" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3 class="video-title">Best Infrastructure for B.Arch</h3>
-                        <p class="video-description">Explore our world-class facilities designed for architecture
-                            and
-                            design education.</p>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/gQUWFpgjb7g" title="CAAD Lecture Series"
+                        <iframe src="https://www.youtube.com/embed/k5L1uRH0LXw" title="Nurturing Passion & Expertise"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
                     </div>
                     <div class="video-info">
-                        <h3 class="video-title">Guest Lecture Series</h3>
-                        <p class="video-description">Learn from renowned architects and design experts from around
-                            the
-                            world.</p>
+                        <h3 class="video-title">Nurturing Passion & Expertise</h3>
+                        <p class="video-description">A Journey Reflecting Depth & Intricacy — Hear from our alumni about their fulfilling journey in architecture.</p>
                     </div>
                 </div>
             </div>
 
             <div class="video-cta">
-                <a href="https://www.youtube.com/@CAADCHENNAIARCHITECTURE" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.youtube.com/@CAADChannels" target="_blank" rel="noopener noreferrer"
                     class="btn btn-outline-primary">
                     <svg class="btn-icon-left" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
                         <path

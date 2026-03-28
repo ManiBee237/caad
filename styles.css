@@ -8425,7 +8425,7 @@ button:focus-visible {
 
 .video-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: var(--space-lg);
     margin-bottom: var(--space-xl);
 }
@@ -8500,21 +8500,19 @@ button:focus-visible {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .video-grid {
         grid-template-columns: 1fr;
     }
 
-    .video-featured {
-        grid-column: 1;
-    }
-
     .video-title {
         font-size: 1.1rem;
-    }
-
-    .video-featured .video-title {
-        font-size: 1.25rem;
     }
 }
 

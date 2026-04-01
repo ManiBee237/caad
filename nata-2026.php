@@ -15,13 +15,250 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pdf_form'])) {
         // Log the lead
         $log_entry = date('Y-m-d H:i:s') . " | NATA PDF Lead | Name: $pdf_name | Phone: $pdf_phone | Email: $pdf_email\n";
         file_put_contents(__DIR__ . '/nata_pdf_leads.log', $log_entry, FILE_APPEND | LOCK_EX);
-        // Optionally notify via mail
         if (file_exists(__DIR__ . '/mail-config.php')) {
             require_once __DIR__ . '/mail-config.php';
+            $date = date('d M Y, h:i A');
+
+            // --- PDF attachments list ---
+            $pdf_files = [
+                ['path' => __DIR__ . '/assets/NATA/01 VISUAL REASONING_EXPLANATORY NOTES.pdf',              'name' => '01 - Visual Reasoning.pdf'],
+                ['path' => __DIR__ . '/assets/NATA/02 LOGICAL DERIVATION_EXPLANATORY NOTES.pdf',            'name' => '02 - Logical Derivation.pdf'],
+                ['path' => __DIR__ . '/assets/NATA/03 NUMERICAL ABILITY_EXPLANATORY NOTES.pdf',             'name' => '03 - Numerical Ability.pdf'],
+                ['path' => __DIR__ . '/assets/NATA/04 GENERAL KNOWLEDGE - ARCHITECTURE & DESIGN_EXPLANATORY NOTES.pdf', 'name' => '04 - General Knowledge Architecture & Design.pdf'],
+                ['path' => __DIR__ . '/assets/NATA/05 DESIGN THINKING_EXPLANATORY NOTES.pdf',              'name' => '05 - Design Thinking.pdf'],
+                ['path' => __DIR__ . '/assets/NATA/06 LANGUAGE INTERPRETATION_EXPLANATORY NOTES.pdf',      'name' => '06 - Language Interpretation.pdf'],
+                ['path' => __DIR__ . '/assets/NATA/07 DESIGN SENSITIVITY_EXPLANATORY NOTES.pdf',           'name' => '07 - Design Sensitivity.pdf'],
+            ];
+
+            // --- 1. Email PDFs to the user ---
+            $user_subject = "Your NATA 2026 Study Notes from CAAD Chennai";
+            $user_body    = <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:'Segoe UI',Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:40px 0;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+
+        <!-- Header -->
+        <tr>
+          <td style="background:linear-gradient(135deg,#1a2035 0%,#2d3a55 100%);padding:40px;text-align:center;">
+            <div style="display:inline-block;background:rgba(184,150,92,0.15);border:1px solid rgba(184,150,92,0.4);border-radius:8px;padding:8px 18px;margin-bottom:16px;">
+              <span style="color:#b8965c;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;">NATA 2026 Study Material</span>
+            </div>
+            <h1 style="margin:0;color:#ffffff;font-size:26px;font-weight:700;">Hi $pdf_name,</h1>
+            <p style="margin:10px 0 0;color:rgba(255,255,255,0.6);font-size:15px;">Your free NATA 2026 study notes are attached below.</p>
+          </td>
+        </tr>
+
+        <!-- Gold strip -->
+        <tr>
+          <td style="background:#b8965c;padding:12px 40px;text-align:center;">
+            <p style="margin:0;color:#1a2035;font-size:13px;font-weight:600;">7 PDFs attached to this email — save them for your preparation!</p>
+          </td>
+        </tr>
+
+        <!-- Body -->
+        <tr>
+          <td style="padding:36px 40px 20px;">
+            <p style="margin:0 0 20px;color:#374151;font-size:15px;line-height:1.7;">Thank you for your interest in CAAD's NATA guidance programme. We have attached all 7 study notes covering every section of the NATA 2026 exam.</p>
+
+            <table width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;border-radius:10px;overflow:hidden;">
+              <tr style="background:#1a2035;">
+                <td style="padding:10px 16px;color:#b8965c;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">#</td>
+                <td style="padding:10px 16px;color:#b8965c;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Study Note</td>
+              </tr>
+              <tr><td style="padding:9px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">01</td><td style="padding:9px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Visual Reasoning</td></tr>
+              <tr><td style="padding:9px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">02</td><td style="padding:9px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Logical Derivation</td></tr>
+              <tr><td style="padding:9px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">03</td><td style="padding:9px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Numerical Ability</td></tr>
+              <tr><td style="padding:9px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">04</td><td style="padding:9px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">General Knowledge — Architecture &amp; Design</td></tr>
+              <tr><td style="padding:9px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">05</td><td style="padding:9px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Design Thinking</td></tr>
+              <tr><td style="padding:9px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">06</td><td style="padding:9px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Language Interpretation</td></tr>
+              <tr><td style="padding:9px 16px;color:#64748b;font-size:13px;">07</td><td style="padding:9px 16px;color:#1a2035;font-size:13px;font-weight:500;">Design Sensitivity</td></tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Next step -->
+        <tr>
+          <td style="padding:8px 40px 36px;">
+            <div style="background:rgba(184,150,92,0.08);border:1px solid rgba(184,150,92,0.2);border-radius:10px;padding:20px 24px;">
+              <p style="margin:0 0 6px;color:#1a2035;font-size:14px;font-weight:700;">Ready to take the next step?</p>
+              <p style="margin:0 0 16px;color:#64748b;font-size:13px;line-height:1.6;">Join CAAD's B.Arch programme and get expert NATA coaching directly on campus.</p>
+              <a href="https://caad.ac.in/admissions.php" style="display:inline-block;background:linear-gradient(135deg,#b8965c,#d4af7a);color:#ffffff;font-weight:700;font-size:13px;padding:12px 28px;border-radius:8px;text-decoration:none;">Apply for Admissions</a>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:24px 40px;text-align:center;">
+            <p style="margin:0;color:#64748b;font-size:13px;font-weight:600;">CAAD — Chennai Academy of Architecture &amp; Design</p>
+            <p style="margin:6px 0 0;color:#94a3b8;font-size:12px;">+91 97105 54545 &nbsp;|&nbsp; admin@caad.ac.in &nbsp;|&nbsp; caad.ac.in</p>
+          </td>
+        </tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
+HTML;
+            sendMail($pdf_email, $user_subject, $user_body, 'admin@caad.ac.in', 'CAAD Chennai', true, $pdf_files);
+
+            // --- 2. Admin notification (no attachments) ---
             $to      = 'admin@caad.ac.in';
-            $subject = "NATA PDF Download Lead: $pdf_name";
-            $body    = "NATA Study Material Download\n============================\nName: $pdf_name\nPhone: $pdf_phone\nEmail: $pdf_email\nDate: " . date('Y-m-d H:i:s');
-            sendMail($to, $subject, $body, $pdf_email, $pdf_name);
+            $subject = "New NATA Study Material Lead - $pdf_name";
+            $date    = date('d M Y, h:i A');
+            $body    = <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:'Segoe UI',Arial,sans-serif;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:40px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background:linear-gradient(135deg,#1a2035 0%,#2d3a55 100%);padding:36px 40px;text-align:center;">
+              <div style="display:inline-block;background:rgba(184,150,92,0.15);border:1px solid rgba(184,150,92,0.4);border-radius:8px;padding:8px 18px;margin-bottom:16px;">
+                <span style="color:#b8965c;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;">NATA 2026 — Study Material</span>
+              </div>
+              <h1 style="margin:0;color:#ffffff;font-size:26px;font-weight:700;letter-spacing:-0.5px;">New PDF Download Lead</h1>
+              <p style="margin:10px 0 0;color:rgba(255,255,255,0.55);font-size:14px;">Someone just unlocked the NATA study notes</p>
+            </td>
+          </tr>
+
+          <!-- Alert Banner -->
+          <tr>
+            <td style="background:#b8965c;padding:12px 40px;text-align:center;">
+              <p style="margin:0;color:#1a2035;font-size:13px;font-weight:600;">A new lead has been captured — follow up soon!</p>
+            </td>
+          </tr>
+
+          <!-- Lead Details -->
+          <tr>
+            <td style="padding:36px 40px 24px;">
+              <h2 style="margin:0 0 20px;color:#1a2035;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid #f1f5f9;padding-bottom:12px;">Lead Details</h2>
+
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding:12px 16px;background:#f8fafc;border-radius:8px;margin-bottom:8px;display:block;">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="32" valign="middle">
+                          <div style="width:32px;height:32px;background:rgba(184,150,92,0.12);border-radius:8px;text-align:center;line-height:32px;font-size:14px;color:#b8965c;font-weight:700;">N</div>
+                        </td>
+                        <td style="padding-left:12px;" valign="middle">
+                          <p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;font-weight:600;">Full Name</p>
+                          <p style="margin:2px 0 0;font-size:15px;color:#1a2035;font-weight:600;">$pdf_name</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td style="height:8px;"></td></tr>
+                <tr>
+                  <td style="padding:12px 16px;background:#f8fafc;border-radius:8px;">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="32" valign="middle">
+                          <div style="width:32px;height:32px;background:rgba(184,150,92,0.12);border-radius:8px;text-align:center;line-height:32px;font-size:14px;color:#b8965c;font-weight:700;">P</div>
+                        </td>
+                        <td style="padding-left:12px;" valign="middle">
+                          <p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;font-weight:600;">Phone Number</p>
+                          <p style="margin:2px 0 0;font-size:15px;color:#1a2035;font-weight:600;">$pdf_phone</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td style="height:8px;"></td></tr>
+                <tr>
+                  <td style="padding:12px 16px;background:#f8fafc;border-radius:8px;">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="32" valign="middle">
+                          <div style="width:32px;height:32px;background:rgba(184,150,92,0.12);border-radius:8px;text-align:center;line-height:32px;font-size:14px;color:#b8965c;font-weight:700;">E</div>
+                        </td>
+                        <td style="padding-left:12px;" valign="middle">
+                          <p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;font-weight:600;">Email Address</p>
+                          <p style="margin:2px 0 0;font-size:15px;color:#1a2035;font-weight:600;">$pdf_email</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td style="height:8px;"></td></tr>
+                <tr>
+                  <td style="padding:12px 16px;background:#f8fafc;border-radius:8px;">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="32" valign="middle">
+                          <div style="width:32px;height:32px;background:rgba(184,150,92,0.12);border-radius:8px;text-align:center;line-height:32px;font-size:14px;color:#b8965c;font-weight:700;">T</div>
+                        </td>
+                        <td style="padding-left:12px;" valign="middle">
+                          <p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.8px;font-weight:600;">Submitted At</p>
+                          <p style="margin:2px 0 0;font-size:15px;color:#1a2035;font-weight:600;">$date</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- What they downloaded -->
+          <tr>
+            <td style="padding:0 40px 32px;">
+              <h2 style="margin:0 0 14px;color:#1a2035;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid #f1f5f9;padding-bottom:12px;">PDFs Unlocked</h2>
+              <table width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;border-radius:10px;overflow:hidden;">
+                <tr style="background:#1a2035;">
+                  <td style="padding:10px 16px;color:#b8965c;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">#</td>
+                  <td style="padding:10px 16px;color:#b8965c;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Study Note</td>
+                </tr>
+                <tr><td style="padding:8px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">01</td><td style="padding:8px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Visual Reasoning</td></tr>
+                <tr><td style="padding:8px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">02</td><td style="padding:8px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Logical Derivation</td></tr>
+                <tr><td style="padding:8px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">03</td><td style="padding:8px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Numerical Ability</td></tr>
+                <tr><td style="padding:8px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">04</td><td style="padding:8px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">General Knowledge — Architecture &amp; Design</td></tr>
+                <tr><td style="padding:8px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">05</td><td style="padding:8px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Design Thinking</td></tr>
+                <tr><td style="padding:8px 16px;color:#64748b;font-size:13px;border-bottom:1px solid #e2e8f0;">06</td><td style="padding:8px 16px;color:#1a2035;font-size:13px;font-weight:500;border-bottom:1px solid #e2e8f0;">Language Interpretation</td></tr>
+                <tr><td style="padding:8px 16px;color:#64748b;font-size:13px;">07</td><td style="padding:8px 16px;color:#1a2035;font-size:13px;font-weight:500;">Design Sensitivity</td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- CTA -->
+          <tr>
+            <td style="padding:0 40px 36px;text-align:center;">
+              <a href="mailto:$pdf_email" style="display:inline-block;background:linear-gradient(135deg,#b8965c,#d4af7a);color:#ffffff;font-weight:700;font-size:14px;padding:14px 32px;border-radius:8px;text-decoration:none;letter-spacing:0.3px;">Reply to $pdf_name</a>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:24px 40px;text-align:center;">
+              <p style="margin:0;color:#94a3b8;font-size:12px;">This is an automated notification from <strong style="color:#64748b;">CAAD Chennai</strong> — caad.ac.in</p>
+              <p style="margin:6px 0 0;color:#cbd5e1;font-size:11px;">Chennai Academy of Architecture &amp; Design</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+HTML;
+            sendMail($to, $subject, $body, $pdf_email, $pdf_name, true);
         }
         $pdf_unlocked = true;
     } else {
@@ -562,13 +799,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pdf_form'])) {
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                             07 — Design Sensitivity
                         </div>
+                        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08);">
+                            <p style="font-size:0.8rem;color:var(--color-primary);font-weight:700;margin-bottom:0.6rem;text-transform:uppercase;letter-spacing:0.08em;">+ Bite-Size MCQ Practice Sets</p>
+                            <div class="pdf-list-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 0 2-2h2a2 2 0 0 0 2 2m-6 9l2 2 4-4"/></svg>
+                                26 Bite-Size MCQ Sets — Day-wise Practice
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Right: form -->
                 <div class="pdf-form-card">
                     <h3>Get Free Study Notes</h3>
-                    <p class="form-sub">Fill in your details to instantly unlock all 7 PDFs</p>
+                    <p class="form-sub">Fill in your details to unlock 7 Study Notes + 26 MCQ Practice Sets</p>
 
                     <?php if ($pdf_error): ?>
                     <div class="pdf-form-error">
@@ -611,39 +855,80 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pdf_form'])) {
             </div>
 
             <?php else: ?>
-            <!-- Unlocked state -->
-            <div class="section-header" id="study-material">
-                <span class="section-label">Free Study Material</span>
-                <h2 class="section-title">NATA 2026 Study Notes</h2>
-                <p class="section-subtitle">Download all 7 explanatory notes below</p>
-            </div>
-            <div class="pdf-success-note">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                Your details have been saved. Download any or all PDFs below.
-            </div>
-            <div class="pdf-cards-grid">
-                <?php
-                $pdfs = [
-                    ['file' => 'assets/NATA/01 VISUAL REASONING_EXPLANATORY NOTES.pdf',              'title' => 'Visual Reasoning'],
-                    ['file' => 'assets/NATA/02 LOGICAL DERIVATION_EXPLANATORY NOTES.pdf',            'title' => 'Logical Derivation'],
-                    ['file' => 'assets/NATA/03 NUMERICAL ABILITY_EXPLANATORY NOTES.pdf',             'title' => 'Numerical Ability'],
-                    ['file' => 'assets/NATA/04 GENERAL KNOWLEDGE - ARCHITECTURE & DESIGN_EXPLANATORY NOTES.pdf', 'title' => 'General Knowledge — Architecture & Design'],
-                    ['file' => 'assets/NATA/05 DESIGN THINKING_EXPLANATORY NOTES.pdf',              'title' => 'Design Thinking'],
-                    ['file' => 'assets/NATA/06 LANGUAGE INTERPRETATION_EXPLANATORY NOTES.pdf',      'title' => 'Language Interpretation'],
-                    ['file' => 'assets/NATA/07 DESIGN SENSITIVITY_EXPLANATORY NOTES.pdf',           'title' => 'Design Sensitivity'],
-                ];
-                foreach ($pdfs as $i => $pdf): ?>
-                <div class="pdf-download-card">
-                    <div class="pdf-card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <!-- Sent state -->
+            <div id="study-material">
+                <!-- Success banner -->
+                <div style="text-align:center;padding:2rem 1rem 2.5rem;">
+                    <div style="width:64px;height:64px;background:rgba(34,197,94,0.1);border:2px solid rgba(34,197,94,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" width="30" height="30"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
-                    <div class="pdf-card-title">0<?= $i + 1 ?> — <?= htmlspecialchars($pdf['title']) ?></div>
-                    <a href="<?= htmlspecialchars($pdf['file']) ?>" download class="pdf-download-btn">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        Download PDF
-                    </a>
+                    <h2 style="font-family:var(--font-serif);font-size:1.8rem;color:var(--color-white);margin-bottom:0.6rem;">Study Material Unlocked!</h2>
+                    <p style="color:var(--color-text-secondary);font-size:1rem;line-height:1.7;margin-bottom:0.25rem;">
+                        Study notes have been emailed to <strong style="color:var(--color-primary);"><?= htmlspecialchars($pdf_email) ?></strong>.
+                    </p>
+                    <p style="color:var(--color-text-secondary);font-size:0.88rem;">Download everything directly below — Notes &amp; MCQ sets in two sections.</p>
                 </div>
-                <?php endforeach; ?>
+
+                <!-- Section: Study Notes -->
+                <div style="margin-bottom:3rem;">
+                    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;">
+                        <span style="display:inline-block;background:var(--color-primary);color:var(--color-dark);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:50px;">Study Notes</span>
+                        <span style="font-size:0.85rem;color:var(--color-text-secondary);">7 explanatory PDFs covering all NATA sections</span>
+                    </div>
+                    <div class="pdf-cards-grid">
+                        <?php
+                        $notes = [
+                            ['01 VISUAL REASONING_EXPLANATORY NOTES.pdf',                         '01 — Visual Reasoning'],
+                            ['02 LOGICAL DERIVATION_EXPLANATORY NOTES.pdf',                       '02 — Logical Derivation'],
+                            ['03 NUMERICAL ABILITY_EXPLANATORY NOTES.pdf',                        '03 — Numerical Ability'],
+                            ['04 GENERAL KNOWLEDGE - ARCHITECTURE & DESIGN_EXPLANATORY NOTES.pdf','04 — General Knowledge: Architecture &amp; Design'],
+                            ['05 DESIGN THINKING_EXPLANATORY NOTES.pdf',                          '05 — Design Thinking'],
+                            ['06 LANGUAGE INTERPRETATION_EXPLANATORY NOTES.pdf',                  '06 — Language Interpretation'],
+                            ['07 DESIGN SENSITIVITY_EXPLANATORY NOTES.pdf',                       '07 — Design Sensitivity'],
+                        ];
+                        foreach ($notes as $note): ?>
+                        <div class="pdf-download-card">
+                            <div class="pdf-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            </div>
+                            <div class="pdf-card-title"><?= $note[1] ?></div>
+                            <a href="assets/NATA/<?= rawurlencode($note[0]) ?>" download class="pdf-download-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download
+                            </a>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+
+                <!-- Section: MCQ Practice Sets -->
+                <div style="margin-bottom:2.5rem;">
+                    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;">
+                        <span style="display:inline-block;background:rgba(184,150,92,0.15);border:1px solid rgba(184,150,92,0.35);color:var(--color-primary);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:50px;">MCQ Practice Sets</span>
+                        <span style="font-size:0.85rem;color:var(--color-text-secondary);">26 bite-size MCQ sets for daily practice</span>
+                    </div>
+                    <div class="pdf-cards-grid">
+                        <?php
+                        $mcq_sets = ['01','02','03','04','05','08','10','11','12','13','14','15','16','17','18','19','20','22','23','24','25','26','27','28','29','30'];
+                        foreach ($mcq_sets as $num): ?>
+                        <div class="pdf-download-card">
+                            <div class="pdf-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 0 2-2h2a2 2 0 0 0 2 2m-6 9l2 2 4-4"/></svg>
+                            </div>
+                            <div class="pdf-card-title">Bite-Size MCQ — Set <?= $num ?></div>
+                            <a href="assets/NATA/MCQ/<?= $num ?>_BITESIZE%20MCQ.pdf" download class="pdf-download-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download
+                            </a>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;padding-top:0.5rem;">
+                    <a href="admissions.php#apply" class="btn btn-primary">Apply to CAAD</a>
+                    <a href="index.php" class="btn btn-outline-primary">Back to Home</a>
+                </div>
             </div>
             <?php endif; ?>
         </div>

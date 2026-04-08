@@ -18,11 +18,110 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $log_entry = date('Y-m-d H:i:s') . " | Name: $name | Email: $email | Phone: $phone | Program: $program | Qualification: $qualification | Message: $message\n";
         file_put_contents(__DIR__ . '/admissions_submissions.log', $log_entry, FILE_APPEND | LOCK_EX);
 
-        require_once __DIR__ . '/mail-config.php';
-        $to = 'admin@caad.ac.in';
-        $subject = "New Admission Enquiry from $name";
-        $body = "New Admission Enquiry\n=====================\n\nName: $name\nEmail: $email\nPhone: $phone\nProgram: $program\nQualification: $qualification\nMessage: $message\n";
-        sendMail($to, $subject, $body, $email, $name);
+        if (file_exists(__DIR__ . '/mail-config.php')) {
+            require_once __DIR__ . '/mail-config.php';
+            $to      = 'admin@caad.ac.in';
+            $subject = "New Admission Enquiry from $name";
+            $date    = date('d M Y, h:i A');
+            $msgHtml = $message ? nl2br($message) : '<em style="color:#999;">No message provided</em>';
+            $qualHtml = $qualification ?: '<em style="color:#999;">Not specified</em>';
+            $htmlBody = <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Admission Enquiry</title>
+</head>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:'Segoe UI',Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:30px 0;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
+
+        <!-- Header -->
+        <tr>
+          <td style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#c9a84c 100%);padding:40px 40px 32px;text-align:center;">
+            <p style="margin:0 0 6px;font-size:13px;letter-spacing:3px;color:#c9a84c;text-transform:uppercase;font-weight:600;">CAAD Chennai</p>
+            <h1 style="margin:0;font-size:26px;color:#ffffff;font-weight:700;letter-spacing:0.5px;">New Admission Enquiry</h1>
+            <p style="margin:10px 0 0;font-size:13px;color:rgba(255,255,255,0.6);">Received on $date</p>
+          </td>
+        </tr>
+
+        <!-- Greeting -->
+        <tr>
+          <td style="padding:32px 40px 8px;">
+            <p style="margin:0;font-size:15px;color:#444;line-height:1.6;">A prospective student has submitted an admission enquiry through the website. Here are their details:</p>
+          </td>
+        </tr>
+
+        <!-- Details Card -->
+        <tr>
+          <td style="padding:16px 40px 8px;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9f7f2;border-radius:10px;border:1px solid #e8e0cc;overflow:hidden;">
+              <tr>
+                <td style="padding:18px 24px;border-bottom:1px solid #e8e0cc;">
+                  <p style="margin:0 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#c9a84c;font-weight:700;">Full Name</p>
+                  <p style="margin:0;font-size:16px;color:#1a1a2e;font-weight:600;">$name</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:18px 24px;border-bottom:1px solid #e8e0cc;">
+                  <p style="margin:0 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#c9a84c;font-weight:700;">Email Address</p>
+                  <p style="margin:0;font-size:15px;color:#1a1a2e;"><a href="mailto:$email" style="color:#1a6ecb;text-decoration:none;">$email</a></p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:18px 24px;border-bottom:1px solid #e8e0cc;">
+                  <p style="margin:0 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#c9a84c;font-weight:700;">Phone Number</p>
+                  <p style="margin:0;font-size:15px;color:#1a1a2e;"><a href="tel:$phone" style="color:#1a6ecb;text-decoration:none;">$phone</a></p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:18px 24px;border-bottom:1px solid #e8e0cc;">
+                  <p style="margin:0 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#c9a84c;font-weight:700;">Program of Interest</p>
+                  <p style="margin:0;font-size:15px;color:#1a1a2e;">$program</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:18px 24px;border-bottom:1px solid #e8e0cc;">
+                  <p style="margin:0 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#c9a84c;font-weight:700;">Current Qualification</p>
+                  <p style="margin:0;font-size:15px;color:#1a1a2e;">$qualHtml</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:18px 24px;">
+                  <p style="margin:0 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#c9a84c;font-weight:700;">Message</p>
+                  <p style="margin:0;font-size:15px;color:#1a1a2e;line-height:1.6;">$msgHtml</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- CTA -->
+        <tr>
+          <td style="padding:24px 40px 8px;text-align:center;">
+            <a href="mailto:$email" style="display:inline-block;background:linear-gradient(135deg,#c9a84c,#e8c97a);color:#1a1a2e;font-weight:700;font-size:14px;padding:14px 36px;border-radius:50px;text-decoration:none;letter-spacing:0.5px;">Reply to $name</a>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="padding:24px 40px 32px;text-align:center;border-top:1px solid #eee;margin-top:16px;">
+            <p style="margin:0;font-size:12px;color:#999;line-height:1.6;">This email was automatically generated from the CAAD website admission enquiry form.<br>Centre for Advanced Architectural Design, Chennai.</p>
+          </td>
+        </tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
+HTML;
+            sendMail($to, $subject, $htmlBody, $email, $name, true);
+        } else {
+            error_log("mail-config.php not found — skipping email for admission enquiry from $name");
+        }
 
         $form_submitted = true;
     } else {

@@ -38,7 +38,7 @@
     <!-- About Page Banner -->
     <section class="about-page-banner">
         <div class="about-banner-img">
-            <img src="assets/images/new-building.jpg" alt="CAAD City Campus">
+            <img src="assets/images/campus-building-transport.jpg" alt="CAAD City Campus">
         </div>
         <div class="about-banner-overlay"></div>
         <div class="container about-banner-content">

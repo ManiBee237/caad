@@ -183,33 +183,294 @@ CAAD is affiliated to Anna University, Chennai and approved by the Council of Ar
                 <!-- Content Right -->
                 <div class="about-director-content">
                     <p class="about-director-label">Director</p>
-                    <h3 class="about-director-name">Prof. Vinodh Vijayakumar</h3>
-                    <p class="about-director-credentials">M.Arch, Ph.D</p>
+                    <h3 class="about-director-name">Dr. Vinodh Vijayakumar</h3>
+                    <p class="about-director-credentials">B.Arch., M.Plan., (SAP), MAUD., (NUS, Singapore), Ph.D.</p>
 
-                    <blockquote class="about-director-quote">
-                        "At CAAD, we believe architecture is not just about buildings — it is about shaping the human experience. Our mission is to cultivate designers who think critically, create boldly, and lead with purpose."
-                    </blockquote>
+                    <p class="about-director-bio">Dr. Vinodh Vijayakumar is the Director of CAAD- Chennai Academy of Architecture and Design, bringing over 15 years of leadership experience in higher education, with expertise in institutional development, collaborations, academic governance, and regulatory frameworks.</p>
 
-                    <p class="about-director-bio">Prof. Vinodh Vijayakumar brings over two decades of rich experience in architecture education and practice. As Director of CAAD, he leads the academic vision of the institution — fostering a culture of creative rigour, global exposure, and professional excellence. Under his stewardship, CAAD has developed strong international collaborations and produced alumni who are leading design firms across India and abroad.</p>
+                    <p class="about-director-bio">He has five years of international exposure, including postgraduate studies at the National University of Singapore and professional experience in Singapore, contributing to projects across Southeast Asia and China. This global perspective informs his approach to academic innovation and collaboration.</p>
 
-                    <div class="about-director-stats">
-                        <div class="about-director-stat">
-                            <span class="stat-num">20+</span>
-                            <span class="stat-label">Years in Architecture Education</span>
-                        </div>
-                        <div class="about-director-stat">
-                            <span class="stat-num">5+</span>
-                            <span class="stat-label">International Collaborations</span>
-                        </div>
-                        <div class="about-director-stat">
-                            <span class="stat-num">1000+</span>
-                            <span class="stat-label">Students Mentored</span>
-                        </div>
-                    </div>
+                    <p class="about-director-bio">An accomplished academician, he holds two postgraduate degrees in Planning and Urban Design, along with a Ph.D., reflecting a strong commitment to research and academic excellence. He has consistently mentored faculty and students, contributing to improved university rankings and successful placements.</p>
+
+                    <p class="about-director-bio">With a vision to build a progressive academic environment, he actively promotes innovative teaching practices, industry partnerships, and international collaborations.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Management — JAYA Group of Institutions -->
+    <section class="section management-section" style="background: var(--color-dark);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Management</span>
+                <h2 class="section-title">JAYA Group of Institutions</h2>
+            </div>
+
+            <div class="jaya-intro">
+                <p class="about-text">At Jaya Group of Institutions, the leadership believes that education is the foundation of transformation. Since our establishment in 1977, we have been dedicated to shaping brilliant minds, fostering innovation, and preparing students to thrive in a rapidly evolving world.</p>
+
+                <h3 class="jaya-subtitle">Our Journey</h3>
+                <p class="about-text">From a humble primary school to a renowned educational network with over 30 institutions, Jaya Group has been a pillar of academic excellence. With a commitment to quality education, research, and skill development, we have empowered thousands of students to become leaders, innovators, and change-makers across diverse industries.</p>
+
+                <h3 class="jaya-subtitle">What We Offer</h3>
+                <ul class="jaya-offer-list">
+                    <li><strong>Multi-disciplinary Education</strong> – Architecture, Engineering, Medicine, Technology, Business, Agriculture, Arts, Sciences, and more.</li>
+                    <li><strong>State-of-the-Art Facilities</strong> – Smart classrooms, advanced labs, libraries, and innovation centers.</li>
+                    <li><strong>Industry-Integrated Learning</strong> – Hands-on training with internships and placements.</li>
+                    <li><strong>Global Outlook</strong> – Research partnerships and exchange programs.</li>
+                    <li><strong>A Legacy of Excellence</strong> – Over four decades of skilled professional graduates.</li>
+                </ul>
+            </div>
+
+            <div class="management-messages-grid">
+
+                <!-- Chairman Message -->
+                <article class="message-card">
+                    <div class="message-header">
+                        <div class="message-photo">
+                            <img src="assets/leaders/kanagaraj.png" alt="Prof. A. Kanagaraj">
+                        </div>
+                        <div class="message-header-text">
+                            <p class="message-role">Chairman Message</p>
+                            <h3 class="message-name">Prof. A. Kanagaraj</h3>
+                            <p class="message-credentials">M.A., M.Phil.</p>
+                        </div>
+                    </div>
+                    <blockquote class="message-quote">
+                        "Delightful task! to rear the tender thought;<br>
+                        To teach the young how to shoot;<br>
+                        To pour the fresh, instruction o'er the mind;<br>
+                        To breathe the enlivening spirit, and<br>
+                        to fix The generous purpose in the glowing heart".<br>
+                        – Thomson, Sp. 1149
+                    </blockquote>
+                    <p class="about-text">"Architecture begins with imagination and takes form through vision," as the saying goes, at CAAD, we cultivate this spirit in aspiring architects—nurturing creativity, critical thinking, and the ability to shape meaningful spaces. In today's dynamic and competitive landscape, we empower architecture students with refined design sensibilities, technical expertise, and innovative thinking.</p>
+                    <p class="about-text">State-of-the-art studios, advanced laboratories, dedicated faculty, vibrant design discussions, national and international workshops, and concept-driven projects form the strong foundation of our architecture education. Our committed mentors serve as guiding lights, inspiring students to transform ideas into impactful built environments.</p>
+                    <p class="about-text">With over 45 years of educational excellence of JAYA Group of Institutions, our institutions reflects deep academic insight and a legacy of shaping thoughtful, responsible, and accomplished professionals in architecture.</p>
+                </article>
+
+                <!-- Vice-Chairman Message -->
+                <article class="message-card">
+                    <div class="message-header">
+                        <div class="message-photo">
+                            <img src="assets/leaders/navaraj.png" alt="Er. K. Navaraj">
+                        </div>
+                        <div class="message-header-text">
+                            <p class="message-role">Message from Vice-Chairman</p>
+                            <h3 class="message-name">Er. K. Navaraj</h3>
+                            <p class="message-credentials">M.Tech., Ph.D.</p>
+                        </div>
+                    </div>
+                    <blockquote class="message-quote">
+                        "Mind has thousand eyes But the Heart with one yet the light of whole life done when the Education is in"
+                    </blockquote>
+                    <p class="about-text">by adhering these words, our Jaya Group of Institutions the Educational Tree has its own branch and extending great shelter to Enthusiastic Professional Degree Candidates. It has great Milestone of Achievement in the ventures on various fields like Architecture, Medical, Dental, Paramedical, Aeronautic, Computer Science, Information Technology, Electrical and Electronic, Electronic and Communication, Civil, Textile and Mechanical Engineering. We are paying utmost interest over the standard of Education by the overseas experiences. Thereby we are building the castle of career set-up to the upcoming Professionals.</p>
+                </article>
+
+                <!-- Secretary Message -->
+                <article class="message-card">
+                    <div class="message-header">
+                        <div class="message-photo">
+                            <img src="assets/leaders/vijaya_kumari.png" alt="Smt. K. Vijaya Kumari">
+                        </div>
+                        <div class="message-header-text">
+                            <p class="message-role">Message from Secretary</p>
+                            <h3 class="message-name">Smt. K. Vijaya Kumari</h3>
+                            <p class="message-credentials">M.A., B.Ed.</p>
+                        </div>
+                    </div>
+                    <blockquote class="message-quote">
+                        "To strive, to seek and to achieve — this is the age."
+                    </blockquote>
+                    <p class="about-text">This is the spirit we strive to instill in the hearts of our future professionals—creative thinkers who will shape the built environment across the world. At the Jaya Group of Institutions, we nurture a vision that extends beyond boundaries, empowering students to become global contributors in architecture and the wider creative industry.</p>
+                    <p class="about-text">We provide support for technical innovations and stimulate projects for global knowledge sharing. Like a mother nurturing her child toward success, we find immense pleasure in helping economically challenged but intellectually capable students through scholarships, sponsorships, bank loans, and endowment prizes. As the well-known proverb says, this is not an end, but a beginning. Our Jaya Group of Institutions will continue its educational service eternally.</p>
+                </article>
+
+                <!-- Joint Secretary Message -->
+                <article class="message-card">
+                    <div class="message-header">
+                        <div class="message-photo message-photo-initials">
+                            <span>KD</span>
+                        </div>
+                        <div class="message-header-text">
+                            <p class="message-role">Message from Joint Secretary</p>
+                            <h3 class="message-name">Dr. K. Deena</h3>
+                            <p class="message-credentials">MBBS, MD</p>
+                        </div>
+                    </div>
+                    <blockquote class="message-quote">
+                        "Excellence is never an accident; it is always the result of high intention, determined effort and skilled execution"<br>
+                        - Aristotle
+                    </blockquote>
+                    <p class="about-text">We warmly welcome all aspiring architects to join CAAD at the Jaya Group of Institutions, and congratulate students and parents for choosing a path that shapes creative futures in architecture and design.</p>
+                    <p class="about-text">Our prime goal is to provide value added education on par with the standards of most sought-after educational institutes across the world. Being sought after by students and principal educators across the country and the globe, our institutions offer advanced academic programs with emphasis on practical and evidence based learning, thereby creating a conducive environment for gaining knowledge and skills. Our teaching learning methods are interactive, supportive, challenging and more rewarding for our students and provide a great chance to enhance their talents further. Besides imparting knowledge through quality education, we also inculcate other activities like sports, communication skills, performances and developing all other human qualities with the highest endeavor of our qualified faculty, pursuing international standard programs for our students.</p>
+                    <p class="about-text">The Faculty relentlessly work on preparing the generation next with the professional soft skills like communication and interpersonal skills that qualify them to become global leaders and valuable citizens in the years to come.</p>
+                </article>
+
+            </div>
+
+            <!-- Director's Message -->
+            <article class="director-message-card">
+                <div class="message-header">
+                    <div class="message-photo">
+                        <img src="assets/leaders/vinodth.png" alt="Dr. Vinodh Vijayakumar">
+                    </div>
+                    <div class="message-header-text">
+                        <p class="message-role">Director's Message</p>
+                        <h3 class="message-name">Dr. Vinodh Vijayakumar</h3>
+                        <p class="message-credentials">B.Arch., M.Plan., (SAP), MAUD., (NUS, Singapore), Ph.D.</p>
+                    </div>
+                </div>
+
+                <p class="about-text">At CAAD, we don't just teach architecture—we shape <strong>future-ready professionals</strong>.</p>
+                <p class="about-text">Architecture is a practice-driven discipline, and our learning model is built around real-world exposure, studio intensity, and industry relevance. From day one, students are trained to think, design, and perform like professionals ensuring they are fully prepared for the demands of the field upon graduation.</p>
+                <p class="about-text">Our pedagogy is aligned with global standards, integrating advanced technologies, research-driven methodologies, and hands-on learning experiences. Students at CAAD evolve into <strong>technologically sound, highly articulate, and disciplined individuals</strong>, ready to excel across architecture and its diverse allied domains.</p>
+                <p class="about-text">We strongly believe that great architects are not only skilled designers but also responsible thinkers. Through community-driven projects, travel-based learning, and collaborative studios, we nurture sensitivity, leadership, and a global outlook.</p>
+                <p class="about-text">With a focused, outcome-oriented academic system, CAAD is committed to delivering <strong>career-ready graduates with strong placement outcomes</strong>. Every student is guided, mentored, and prepared to step confidently into the professional world.</p>
+                <p class="about-text"><em>Future-Ready Architects. Assured Outcomes.</em></p>
+                <p class="about-text">At CAAD, your journey transforms you into an accomplished professional—and a remarkable individual.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <style>
+        .management-section .jaya-intro {
+            max-width: 960px;
+            margin: 0 auto var(--space-2xl);
+            text-align: left;
+        }
+        .management-section .jaya-subtitle {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            color: var(--color-primary);
+            margin: var(--space-lg) 0 var(--space-sm);
+        }
+        .management-section .jaya-offer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .management-section .jaya-offer-list li {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            padding: 8px 0 8px 22px;
+            position: relative;
+        }
+        .management-section .jaya-offer-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 18px;
+            width: 10px;
+            height: 2px;
+            background: var(--color-primary);
+        }
+        .management-messages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+            align-items: start;
+        }
+        .message-card,
+        .director-message-card {
+            background: var(--color-dark-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-lg);
+            padding: 36px 40px;
+            transition: all var(--transition-smooth);
+            height: auto;
+            align-self: start;
+        }
+        .message-card:hover,
+        .director-message-card:hover {
+            border-color: rgba(184, 150, 92, 0.25);
+            transform: translateY(-4px);
+        }
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: var(--space-md);
+        }
+        .message-photo {
+            flex-shrink: 0;
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--color-dark-tertiary);
+            border: 2px solid rgba(184, 150, 92, 0.35);
+        }
+        .message-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+        .message-photo-initials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(184, 150, 92, 0.25), rgba(184, 150, 92, 0.08));
+            color: var(--color-primary);
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .message-header-text {
+            flex: 1;
+            min-width: 0;
+        }
+        .message-role {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin: 0 0 4px;
+        }
+        .message-name {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--color-text);
+            margin: 0 0 2px;
+            line-height: 1.2;
+        }
+        .message-credentials {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            margin: 0;
+        }
+        .message-quote {
+            font-size: 1rem;
+            color: var(--color-text);
+            font-style: italic;
+            border-left: 3px solid var(--color-primary);
+            padding: 4px 0 4px 18px;
+            margin: 0 0 var(--space-md);
+            line-height: 1.7;
+        }
+        @media (max-width: 900px) {
+            .management-messages-grid {
+                grid-template-columns: 1fr;
+            }
+            .message-card,
+            .director-message-card {
+                padding: 28px 24px;
+            }
+            .message-photo {
+                width: 68px;
+                height: 68px;
+            }
+            .message-name {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 
     <!-- Affiliations -->
     <section class="section" style="background: var(--color-dark-secondary);">
